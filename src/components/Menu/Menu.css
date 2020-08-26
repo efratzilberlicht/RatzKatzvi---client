@@ -1,0 +1,13 @@
+
+a.nav-link {
+    color: brown;
+}
+a.nav-link:hover {
+    color: white;
+    background-color: brown;
+}
+.navbar navbar-expand-lg navbar-light bg-light {
+    text-align: center;
+    align-items: center;
+    background-color: chartreuse;
+}
