@@ -1,0 +1,2 @@
+let idKind;
+let kind;
