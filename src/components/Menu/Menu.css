@@ -1,13 +1,12 @@
 
 a.nav-link {
-    color: brown;
+    color:#dcc2a1;
+    font-weight: bold;
 }
 a.nav-link:hover {
-    color: white;
-    background-color: brown;
+    color:white;
+    background-color:#dcc2a1;
 }
-.navbar navbar-expand-lg navbar-light bg-light {
-    text-align: center;
-    align-items: center;
-    background-color: chartreuse;
+.navbar {
+    justify-content: center !important;
 }

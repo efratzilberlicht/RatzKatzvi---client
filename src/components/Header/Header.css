@@ -1,0 +1,14 @@
+.mr-sm-2{
+    direction: rtl;
+    
+}
+
+.form-control {
+    transition: none;
+}
+.header {
+    text-align: center;
+}
+#logo {
+  height:15vh;
+}

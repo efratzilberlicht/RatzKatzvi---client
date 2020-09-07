@@ -1,0 +1,25 @@
+.body {
+    text-align: center;
+}
+.card {
+    width:35vw !important ;
+    border:none !important ;
+}
+.card-img {
+    height:60% !important;
+    width:40% !important ;
+}
+.text {
+    font-size: larger;
+    font-weight: bold;
+    color: #03233a;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #03233a !important;
+    border-color: #03233a !important;
+    width: 20% !important;
+    font-size: 70% !important;
+    font-weight: bold;
+}

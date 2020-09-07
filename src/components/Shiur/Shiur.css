@@ -1,0 +1,13 @@
+Card {
+    height: 30vh;
+    width: 20vw;
+}
+Card.Body {
+    height: 10vh;
+    width: 7vw;  
+}
+#l {
+    height: 20vh;
+    width: 10vw; 
+   
+}
