@@ -11,10 +11,10 @@ export default function Header(props) {
     const [fromControl, setfromControl] = React.useState(false);
     const click = () => setfromControl(true)
     return (<div className="header">
-        <Form inline>
+        {/* <Form inline>
             <Button variant="outline-success" onClick={click}>Search</Button>
             {fromControl ? <FormControl type="text" placeholder="חפש כאן" className="mr-sm-2" /> : false}
-        </Form>
+        </Form> */}
         <img src="/images/logocut.png" id="logo" />
         <Menu />
     </div>
