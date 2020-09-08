@@ -5,9 +5,13 @@
     width:35vw !important ;
     border:none !important ;
 }
-.card-img {
+/* .card-img {
     height:60% !important;
     width:40% !important ;
+} */
+.book {
+    height:60% !important;
+    width:40% !important ;  
 }
 .text {
     font-size: larger;

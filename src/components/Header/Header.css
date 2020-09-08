@@ -1,8 +1,6 @@
 .mr-sm-2{
     direction: rtl;
-    
 }
-
 .form-control {
     transition: none;
 }
@@ -11,4 +9,11 @@
 }
 #logo {
   height:17vh;
+}
+#searcheader {
+    border-color: #d1ba9b;
+    /* color: #d1ba9b !important; */
+}
+#searcheader:focus {
+  /* border-color: #d1ba9b; */
 }

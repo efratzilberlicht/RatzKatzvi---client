@@ -13,7 +13,7 @@ export default function Header(props) {
     return (<div className="header">
         {/* <Form inline>
             <Button variant="outline-success" onClick={click}>Search</Button>
-            {fromControl ? <FormControl type="text" placeholder="חפש כאן" className="mr-sm-2" /> : false}
+            {fromControl ? <FormControl id="searcheader" type="text" placeholder="חפש כאן" className="mr-sm-2" /> : false}
         </Form> */}
         <img src="/images/logocut.png" id="logo" />
         <Menu />
