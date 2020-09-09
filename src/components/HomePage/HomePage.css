@@ -86,11 +86,18 @@ form {
 .title {
     color:#03233a ;
     padding-right: 3%;
+    font-weight: 650;
     /* margin-bottom: 0rem; */
     /* font-weight: 800;
     font-size: 7vh; */
     /* direction: rtl; */
     /* size:20vh; */
+}
+.titlesub {
+    color:#03233a ;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 650;
 }
 .card-body {
     width: 22vw;
@@ -118,4 +125,13 @@ p {
 .h5 {
     font-size:1.65rem;
     font-weight: 650;
+}
+.s {
+    width: 65%;
+}
+#subject {
+    justify-content: center !important;
+}
+.t {
+    text-align: center;
 }

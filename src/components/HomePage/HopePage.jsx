@@ -73,9 +73,73 @@ export default function HomePage(props) {
            </NavDropdown> */}
         </Form> 
         </div>
+       
+        <div id="subjects">
+        <h1 className="titlesub"> ? איזה נושא מעניין אותך </h1>
+        <CardColumns>
+       <Container dir="rtl">
+  <Row>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/poriut.png" className="s"/>
+                <Card.Title className="t">פוריות ויוחסין</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/actualation.png" className="s"/>
+                <Card.Title>אקטואליה בהלכה</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/yearcircle.png" className="s"/>
+                <Card.Title>מעגל השנה</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/weaman.png" className="s"/>
+                <Card.Title>חיובי נשים</Card.Title>
+            </Card.Body>
+        </Card>  
+  </Row>
+  {/* <Row>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/poriut.png" className="s"/>
+                <Card.Title className="t">אורח חיים</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/shabat.png" className="s"/>
+                <Card.Title>שבת</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/chehuna.png" className="s"/>
+                <Card.Title>כהונה</Card.Title>
+            </Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/avelut.png" className="s"/>
+                <Card.Title>אבלות</Card.Title>
+            </Card.Body>
+        </Card> 
+        <Card>
+            <Card.Body>
+            <Card.Img src="./images/machshava.png" className="s"/>
+                <Card.Title>מחשבה</Card.Title>
+            </Card.Body>
+        </Card>   
+  </Row> */}
+</Container>
+    </CardColumns>
 
-        
-
+        </div>
         <div id="news">
             <h1>!רוצה להיות מעודכן בתוכן החדש שלנו? הרשם עכשיו</h1>
         <Form dir="rtl">
@@ -95,7 +159,8 @@ export default function HomePage(props) {
 
         <div id="updates" >
            <h1 className="title">עדכונים</h1>
-           <CardColumns >
+           <img src="/images/kavyaeli.png" className="kav"/>
+           <CardColumns>
        <Container dir="rtl">
   <Row>
         <Card>
