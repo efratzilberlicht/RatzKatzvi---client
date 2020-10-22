@@ -1,22 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component , useState} from 'react'
 import PropTypes from 'prop-types'
 import { Navbar, NavDropdown, FormControl, Form, Button, Nav } from 'react-bootstrap';
 import Menu from '../Menu/Menu';
 import './Header.css';
 
 export default function Header(props) {
-    //     click(){
-    // 
-    //     };
-    const [fromControl, setfromControl] = React.useState(false);
-    const click = () => setfromControl(true)
+
+    const [fromControl, setfromControl] = useState(false);
+
+    const click = () => setfromControl(!fromControl)
+    
     return (<div className="header">
-        {/* <Form inline>
-            <Button variant="outline-success" onClick={click}>Search</Button>
-            {fromControl ? <FormControl id="searcheader" type="text" placeholder="חפש כאן" className="mr-sm-2" /> : false}
-        </Form> */}
+        <div className="up">
+            <img id="login" src="/images/fulllogin.png"/>
+            <img id="searchicon" src="/images/search.png" onClick={click} />
+        {fromControl ? <Form inline>
+            <FormControl id="searcheader" type="text" placeholder="חפש כאן" className="mr-sm-2" /> 
+        </Form>: false}
+        </div>
         <img src="/images/logocut.png" id="logo" />
         <Menu />
     </div>
     );
 }
+

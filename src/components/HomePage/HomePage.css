@@ -6,92 +6,73 @@ body {
     height: 60vh;
     transition: 4s;
 }
-#news {
-    text-align: center;
-    /* padding: 5%; */
-    padding: 3%;
-    background-color:#dcc2a1;
-    
-}
-h1 {
-    padding-top: 3%;
-    color: white;
-    font-size: 6.5vh;
-}
-.form-control {
-    color:#d1ba9b !important;
-    width: 70%;
-    height: 115%;
-    border-radius: 9px;
-    /* margin-left: 0vw !important;
-    margin-right: 0vw; */
-}
-.form-control:focus {
-    box-shadow: none;
-    border-color: white;
-}
-.col {
-    /* padding-right: 1% !important;
-    padding-left: 1% !important; */
-    /* width: 100%; */
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-.btn {
-    width: 70%;
-    height: 115%;
-    border-radius: 9px;
-    background-color: #03233a;
-    border-color:#03233a ;
-    box-shadow: none; 
-    font-weight: 600;
-}
-.btn:hover {
-    background-color: #03233a;
-    border-color: #03233a ;
-    width: 71%;
-    height: 120%;
-}
 #search {
     text-align: center;
-    /* padding: 5%; */
     padding: 3%;
     background-color:#03233a;
 }
+h1 {
+    padding-top: 3%;
+    font-size: 6.5vh;
+}
+.h1 {
+    color: white;
+}
 h5 {
-    /* color:#d1ba9b; */
     color:#dcc2a1;
 }
-.mr-sm-2 {
-    height: 120%;
+.titlesub {
+    color:#03233a ;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 650;
+    font-size: 6.5vh;
 }
-/* .searchfree {
-    width: 100%;
-    height: 120%;
-} */
-/* .form-inline {
-    width: 100%;
-} */
-form {
+#icons {
+    padding-right: 15% !important;
+    padding-left: 15% !important;
+}
+.card-columns {
+    column-count: 5 !important;
     justify-content: center !important;
 }
-
-.form-inline .form-control {
-    width: 40%;
-    margin: 1.5%; 
-    color: #dcc2a1;
-    /* text-decoration-style: initial !important; */
-    /* text-decoration-style: inherit !important;  */
+.card-body {
+    margin:0% !important;
+}
+.s {
+    width: 38% !important;
+    text-align: center;
+}
+.t {
+    color:#03233a ;
+    text-align: center;
+    width: 35%;
 }
 .title {
+    padding-right: 12.5%;
     color:#03233a ;
-    padding-right: 3%;
+    text-align: right;
+    padding-bottom: 0%;
     font-weight: 650;
-    /* margin-bottom: 0rem; */
-    /* font-weight: 800;
-    font-size: 7vh; */
-    /* direction: rtl; */
-    /* size:20vh; */
+    font-size: 6.5vh;
+}
+.kav {
+    width: 91%;
+    padding-right:0% !important;
+}
+#cardColumns {
+    column-count: 4 !important;
+    margin-left: 11% !important;
+    margin-right: 11% !important;
+}
+.updateCard {
+    width: 53%;
+    padding: 0%;
+    text-align: right;
+    direction: rtl;
+}
+.updateImg {
+    padding-bottom: 5%;
 }
 .titlesub {
     color:#03233a ;
@@ -99,26 +80,7 @@ form {
     padding-bottom: 3%;
     font-weight: 650;
 }
-.card-body {
-    width: 22vw;
-    float: left;
-    direction: rtl;
-    position: relative;
-    color:#03233a;
-    
-}
-.card-columns  {
-    column-count: 4;
-}
-/* .l {
-    width: 10% !important;
-} */
-.u {
-    width: 85%;
-    padding-bottom: 2%;
-}
 p {
-    width: 87%;
     font-size: large;
     font-weight: 600;
 }
@@ -126,12 +88,46 @@ p {
     font-size:1.65rem;
     font-weight: 650;
 }
-.s {
-    width: 65%;
+.col {
+    width: 20% !important;
 }
-#subject {
+/* #subject {
     justify-content: center !important;
-}
-.t {
+} */
+#news {
     text-align: center;
+    padding: 3%;
+    background-color:#dcc2a1;   
 }
+.input {
+    color:#d1ba9b !important;
+    width: 80% !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    border-color: white !important;
+}
+.form-row {
+    padding-top: 3%;
+    /* padding-right:10% !important;
+    padding-left:10% !important; */
+    padding-bottom: 3%;
+}
+/* input {
+    margin: 0% !important;
+} */
+/* .col {
+    width:50% !important;
+} */
+.btn {
+
+    background-color: #03233a !important;
+    width: 80% !important;
+    border-radius: 12px !important;
+    border-color:#03233a !important;
+    box-shadow:none !important;
+}
+.btn:hover {
+    /* box-shadow:#03233a !important; */
+    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; */
+
+} 

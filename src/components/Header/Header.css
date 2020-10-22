@@ -3,17 +3,34 @@
 }
 .form-control {
     transition: none;
+    color: #d1ba9b;
 }
 .header {
     text-align: center;
 }
 #logo {
   height:17vh;
+  margin-right: 30vw;
 }
 #searcheader {
     border-color: #d1ba9b;
+    width: 95%;
     /* color: #d1ba9b !important; */
 }
 #searcheader:focus {
   /* border-color: #d1ba9b; */
+}
+#searchicon {
+  height: 5vh;
+  float: left;
+  margin: 1%;
+}
+.up {
+   /* display: inline; */
+   float: left;
+   margin-left: 8vw;
+}
+#login {
+  float: left;
+  width:60%;
 }

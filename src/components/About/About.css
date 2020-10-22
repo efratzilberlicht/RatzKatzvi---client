@@ -1,0 +1,32 @@
+.body {
+ direction: rtl;
+}
+#text{
+
+ float: left;
+ padding: 3%;
+ width: 50% !important;
+}
+#img {
+float: left; 
+margin-top:10%;
+padding:3%;
+width: 40% !important;           
+} 
+h1 {
+color:#03233a ;
+font-size: 6.5vh;
+text-align: center;
+padding-bottom: 3%;
+font-weight: 700 !important;
+}
+p {
+color:#03233a ;
+font-size: large;
+font-weight: 600;
+text-align: right;
+}
+.row {
+column-count: 2;
+width: 100%;
+}

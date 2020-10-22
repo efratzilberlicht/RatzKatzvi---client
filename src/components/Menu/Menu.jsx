@@ -8,9 +8,9 @@ export default function Menu(props) {
     return (
         <Navbar dir="rtl" expand="lg">
         
-        <Nav.Link href="#home">דף הבית</Nav.Link>
-        <Nav.Link href="#link">אודות</Nav.Link>
-        <Nav.Link href="#home">חיפוש מתקדם</Nav.Link>
+        <Nav.Link href="/">דף הבית</Nav.Link>
+        <Nav.Link href="/About">אודות</Nav.Link>
+        <Nav.Link href="/AdvancedSearch">חיפוש מתקדם</Nav.Link>
         <Nav.Link href="#home">ספרים</Nav.Link>
         <Nav.Link href="#home">מאמרי מחשבה</Nav.Link>
         <Nav.Link href="#home">שיעורי הלכה</Nav.Link>
