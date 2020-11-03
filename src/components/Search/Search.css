@@ -1,35 +1,28 @@
-/* .form-control {
-color:#d1ba9b !important;
-width: 100%;
-height: 115%;
-border-radius: 9px;
-}
-.form-control:focus {
-box-shadow: none;
-border-color: white;
-}
-/* .form-inline .form-control {
-width: 40%;
- margin: 1.5%; 
-color: #dcc2a1;
-}  */
-/* .mr-sm-2 {
- height: 120%;
- width: 70%;
- text-shadow: none;
- } */
 form {
  justify-content: center !important;
-}  
-.form-control {
-width: 150%;                
 } 
+.form-inline {
+padding-right: 10vw;
+} 
+.form-inline .form-control {
+  width: 600px !important; 
+  border-radius: 12px !important; 
+}
+.form-inline .form-control:focus {
+box-shadow: none;
+} 
+.mr-sm-2 {
+  margin-left:10vw !important;
+}
 #dropdownSerach {
-background-color: white;
+background-color: white !important;
 color:#dcc2a1;
-direction: rtl;
-width: 220%;
-
+width: 500px !important;
+text-align: right;
+margin-top: 3vw;
+margin-left: 100vw;
+margin-right: 90vw;
+margin-bottom: 2vw;
 }
 
 #dropdownSerach:focus{

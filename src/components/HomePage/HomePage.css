@@ -12,7 +12,9 @@ body {
     background-color:#03233a;
 }
 h1 {
-    padding-top: 3%;
+    direction: ltr;
+    padding-top: 30px;
+    padding-bottom: 7px  !important;
     font-size: 6.5vh;
 }
 .h1 {
@@ -20,32 +22,13 @@ h1 {
 }
 h5 {
     color:#dcc2a1;
-}
-.titlesub {
-    color:#03233a ;
-    text-align: center;
-    padding-bottom: 3%;
-    font-weight: 650;
-    font-size: 6.5vh;
-}
-#icons {
-    padding-right: 15% !important;
-    padding-left: 15% !important;
-}
-.card-columns {
-    column-count: 5 !important;
-    justify-content: center !important;
-}
-.card-body {
-    margin:0% !important;
+    padding-bottom: 15px  !important;
 }
 .s {
     width: 38% !important;
-    text-align: center;
 }
 .t {
     color:#03233a ;
-    text-align: center;
     width: 35%;
 }
 .title {
@@ -91,9 +74,6 @@ p {
 .col {
     width: 20% !important;
 }
-/* #subject {
-    justify-content: center !important;
-} */
 #news {
     text-align: center;
     padding: 3%;
@@ -107,17 +87,9 @@ p {
     border-color: white !important;
 }
 .form-row {
-    padding-top: 3%;
-    /* padding-right:10% !important;
-    padding-left:10% !important; */
-    padding-bottom: 3%;
+    padding-top: 35px;
+    padding-bottom: 25px;
 }
-/* input {
-    margin: 0% !important;
-} */
-/* .col {
-    width:50% !important;
-} */
 .btn {
 
     background-color: #03233a !important;
@@ -126,8 +98,3 @@ p {
     border-color:#03233a !important;
     box-shadow:none !important;
 }
-.btn:hover {
-    /* box-shadow:#03233a !important; */
-    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; */
-
-} 

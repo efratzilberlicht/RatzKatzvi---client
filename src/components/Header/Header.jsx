@@ -1,13 +1,11 @@
-import React, { Component , useState} from 'react'
-import PropTypes from 'prop-types'
-import { Navbar, NavDropdown, FormControl, Form, Button, Nav } from 'react-bootstrap';
+import React, { useState } from 'react'
+import { FormControl, Form } from 'react-bootstrap';
 import Menu from '../Menu/Menu';
 import './Header.css';
 
 export default function Header(props) {
 
     const [fromControl, setfromControl] = useState(false);
-
     const click = () => setfromControl(!fromControl)
     
     return (<div className="header">

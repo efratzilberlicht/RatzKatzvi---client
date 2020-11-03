@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Switch, Route } from 'react-router-dom';
+import { Switch, Route ,BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HopePage';
 import About from './components/About/About';
@@ -14,12 +14,12 @@ function App() {
   return (
     <div>
       <Header />
-      <HomePage />
-      {/* <About /> */}
-      {/* <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/About" component={About} /> */}
-        {/* <Route exact path="/AdvancedSearch" component={AdvancedSearch} />
+      
+      <Router>
+      <Switch>
+        <Route path="/About" component={About} />
+        <Route path="/" component={HomePage} />
+         {/* <Route exact path="/AdvancedSearch" component={AdvancedSearch} />
         <Route path="/AdvancedSearch" component={AdvancedSearch} />
         <Route path="/" component={} />
         <Route path="/" component={} />
@@ -27,7 +27,8 @@ function App() {
         <Route path="/" component={} />
         <Route path="/" component={} />
         <Route path="/" component={} /> */}
-      {/* </Switch> */}
+     </Switch>
+     </Router>
     </div>
   );
 }

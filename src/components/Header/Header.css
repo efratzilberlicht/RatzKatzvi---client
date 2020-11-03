@@ -1,36 +1,33 @@
-.mr-sm-2{
-    direction: rtl;
-}
-.form-control {
-    transition: none;
-    color: #d1ba9b;
-}
 .header {
     text-align: center;
 }
 #logo {
   height:17vh;
-  margin-right: 30vw;
+  margin-right: 20vw;
+  justify-content: center !important;
 }
 #searcheader {
     border-color: #d1ba9b;
-    width: 95%;
-    /* color: #d1ba9b !important; */
+    height: 36px;
+    width: 220px !important;
+    margin-top: 1px;
+    margin-left: 4px !important;
+    direction: rtl;
 }
 #searcheader:focus {
-  /* border-color: #d1ba9b; */
+  box-shadow: none !important;
+  border-color: #d1ba9b;
 }
 #searchicon {
+  margin-left: 4px;
   height: 5vh;
   float: left;
-  margin: 1%;
 }
 .up {
-   /* display: inline; */
    float: left;
    margin-left: 8vw;
 }
 #login {
   float: left;
-  width:60%;
+  width:130px;
 }

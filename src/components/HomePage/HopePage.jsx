@@ -82,13 +82,13 @@ export default function HomePage(props) {
         </Carousel>
         
         <div id="search">
-            <h1>חפש נושא</h1>
-            <h5>תוכל למצוא בכל השיעורים</h5>
+            <h1 className="h1">חפש נושא</h1>
+            <h5> תוכל למצוא בכל השיעורים בהלכה ובמחשבה</h5>
            <Search/>
         </div>
 
         <div id="subjects">
-            <h1 className="titlesub"> ? איזה נושא מעניין אותך </h1>
+            <h1> ? איזה נושא מעניין אותך </h1>
            <div id="icons">  
            <CardColumns>
                     {ICONS.map(icon => getIconCard(icon.src, icon.name))}
@@ -114,7 +114,7 @@ export default function HomePage(props) {
 
         <div dir="rtl" id="updates">
             <h1 className="title">עדכונים</h1>
-            <img src="/images/kavyaeli.png" className="kav" />
+            <img alt="kavyaeli" src="/images/kavyaeli.png" className="kav" />
             <CardColumns id="cardColumns">
                 {UPDATES.map(update => getUpdate(update.src, update.title, update.text, update.time))}
             </CardColumns>

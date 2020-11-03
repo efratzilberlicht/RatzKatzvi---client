@@ -1,8 +1,4 @@
-.body {
- direction: rtl;
-}
 #text{
-
  float: left;
  padding: 3%;
  width: 50% !important;
