@@ -15,7 +15,7 @@ h1 {
     direction: ltr;
     padding-top: 30px;
     padding-bottom: 7px  !important;
-    font-size: 6.5vh;
+    /* font-size: 6.5vh; */
 }
 .h1 {
     color: white;
@@ -43,19 +43,27 @@ h5 {
     width: 91%;
     padding-right:0% !important;
 }
-#cardColumns {
+/* #cardColumns {
     column-count: 4 !important;
     margin-left: 11% !important;
     margin-right: 11% !important;
-}
+} */
 .updateCard {
-    width: 53%;
-    padding: 0%;
+    /* width: 20vw; */
+    padding: 0% !important;
     text-align: right;
     direction: rtl;
+    border:none !important;
 }
 .updateImg {
     padding-bottom: 5%;
+    /* width: 17vw; */
+}
+.card-title {
+    margin-bottom: 0.3rem !important;
+}
+.col-lg-2 {
+   width: 10% !important;
 }
 .titlesub {
     color:#03233a ;
@@ -64,12 +72,14 @@ h5 {
     font-weight: 650;
 }
 p {
-    font-size: large;
-    font-weight: 600;
+    font-size: medium !important;
+    font-weight: 500 !important;
+    line-height: 1.2rem;
 }
 .h5 {
     font-size:1.65rem;
-    font-weight: 650;
+    font-weight: 700 !important;
+    color:#03233a ;
 }
 .col {
     width: 20% !important;
@@ -91,7 +101,6 @@ p {
     padding-bottom: 25px;
 }
 .btn {
-
     background-color: #03233a !important;
     width: 80% !important;
     border-radius: 12px !important;
