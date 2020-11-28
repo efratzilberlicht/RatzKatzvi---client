@@ -1,0 +1,208 @@
+body {
+    text-align: right;
+    line-height: 1.3;
+}
+.carousel-item {
+    height: 60vh;
+    transition: 4s;
+}
+#search {
+    text-align: center;
+    padding: 3%;
+    background-color:#03233a;
+}
+h1 {
+    direction: ltr;
+    padding-top: 30px;
+    padding-bottom: 7px  !important;
+    /* font-size: 6.5vh; */
+}
+.h1 {
+    color: white;
+}
+h5 {
+    color:#dcc2a1;
+    padding-bottom: 15px  !important;
+}
+.s {
+    width: 33% !important;
+}
+.t {
+    color:#03233a ;
+    width: 35%;
+}
+.title {
+    padding-right: 12.5%;
+    color:#03233a ;
+    text-align: right;
+    padding-bottom: 0%;
+    font-weight: 650;
+    font-size: 6.5vh;
+}
+.kav {
+    width: 91%;
+    padding-right:0% !important;
+}
+/* #cardColumns {
+    column-count: 4 !important;
+    margin-left: 11% !important;
+    margin-right: 11% !important;
+} */
+.updateCard {
+    /* width: 20vw; */
+    padding: 0% !important;
+    text-align: right;
+    direction: rtl;
+    border:none !important;
+}
+.updateImg {
+    padding-bottom: 5%;
+    /* width: 17vw; */
+}
+.card-title {
+    margin-bottom: 0.3rem !important;
+}
+.col-lg-2 {
+   width: 10% !important;
+}
+.titlesub {
+    color:#03233a ;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 650;
+}
+p {
+    font-size: medium !important;
+    font-weight: 500 !important;
+    line-height: 1.2rem;
+}
+.h5 {
+    font-size:1.65rem;
+    font-weight: 700 !important;
+    color:#03233a ;
+}
+.col {
+    width: 20% !important;
+}
+#news {
+    text-align: center;
+    padding: 3%;
+    background-color:#dcc2a1;   
+}
+.input {
+    color:#d1ba9b !important;
+    width: 80% !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    border-color: white !important;
+}
+.form-row {
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+.btn {
+    background-color: #03233a !important;
+    width: 80% !important;
+    border-radius: 12px !important;
+    border-color:#03233a !important;
+    box-shadow:none !important;
+}
+#icons {
+    
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* grid-template-rows:  repeat(6, auto); */
+    /* grid-template-rows: 40px auto auto auto auto 40px; */
+    grid-template-areas: 
+    "* * h h h h h h * *"
+    "* * * * * * * * * *"
+    "* 4 4 3 3 2 2 1 1 *"
+    "* 4 4 3 3 2 2 1 1 *"
+    "9 9 8 8 7 7 6 6 5 5"
+    "9 9 8 8 7 7 6 6 5 5" !important;
+    grid-gap: 3px;
+    height: 100%; 
+}
+#i1 {
+    grid-area: 1;
+    display: flex;
+}
+#i2 {
+    grid-area: 2;
+    display: flex;
+}
+#i3 {
+    grid-area: 3;
+    display: flex;
+}
+#i4 {
+    grid-area: 4;
+    display: flex;
+}
+#i5 {
+    grid-area: 5;
+    display: flex;
+}#i6 {
+    grid-area: 6;
+    display: flex;
+}#i7 {
+    grid-area:7;
+    display: flex;
+}#i8 {
+    grid-area: 8;
+    display: flex;
+}#i9 {
+    grid-area: 9;
+    display: flex;
+}
+
+/* @media (min-width: 576px) { 
+
+    .therapists_table{
+    height: 100%;
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    grid-auto-rows: 125px;
+    justify-content: space-evenly;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.therapistCard{
+    background-color:white;
+    width: 115px;
+    height: 125px;
+   
+    box-shadow: 0 0 4px 1px #6c757d;
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
+    
+}
+}
+@media (min-width: 1200px) { 
+    .therapists_table{
+        height: 100%;
+        display: grid;
+        grid-gap:10px;
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        grid-auto-rows: 125px;
+        justify-content: space-evenly;
+        padding-right: 120px;
+        padding-left: 120px;
+    }
+    
+    .therapistCard{
+        background-color:white;
+        width: 225px;
+        height: 250px;
+        box-shadow: 0 0 4px 1px #6c757d;
+        text-align: -webkit-center;
+        display: flex;
+        flex-direction: column;
+        
+        grid-row: span 2;
+    }
+} */

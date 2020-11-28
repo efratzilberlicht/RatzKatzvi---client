@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FormControl, Form } from 'react-bootstrap';
-import Menu from '../Menu/Menu';
+import Menu from './Menu';
 import './Header.css';
 
 export default function Header(props) {

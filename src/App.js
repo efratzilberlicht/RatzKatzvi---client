@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route ,BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
-import HomePage from './components/HomePage/HopePage';
-import About from './components/About/About';
+import HomePage from './pages/HomePage/HopePage';
+import About from './pages/About/About';
 import Manager from './components/Manager/Manager';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

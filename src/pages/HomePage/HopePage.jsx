@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import connect from 'react-dom'
 import PropTypes from 'prop-types'
 import { Carousel, Form, Col, Button, Card, CardColumns } from 'react-bootstrap'
-import Search from '../Search/Search';
+import Search from '../AdvancedSearch/Search';
 import './HomePage.css';
 
 const IMAGES = [{ scr: "/images/HomePage.jpg", position: 'First slide' },
@@ -14,11 +14,11 @@ const ICONS = [{ src: "./images/poriut.png", name: "פוריות ויוחסין"
 { src: "./images/actualation.png", name: "אקטואליה בהלכה" },
 { src: "./images/yearcircle.png", name: "מעגל השנה" },
 { src: "./images/weaman.png", name: "חיובי נשים" },
-{ src: "./images/life.png", name: "אורח חיים" },
+{ src: "./images/life.png", name: "אורח חיים"},
 { src: "./images/shabat.png", name: "שבת" },
 { src: "./images/chehuna.png", name: "כהונה" },
 { src: "./images/avelut.png", name: "אבלות" },
-{ src: "./images/machshava.png", name: "מחשבה" }]
+{ src: "./images/machshava.png", name: "מחשבה"}]
 
 const UPDATES = [{
     src: "./images/update.png", title: "חדשות",
@@ -40,7 +40,7 @@ const UPDATES = [{
     text: "This is a wider card with supporting text below as a natural additional content. with supporting text below as"
     , time: "שעות 5"
 }]
-
+var i=0;
 export default function HomePage(props) {
 
     function getCarouselItem(scr, position) {
@@ -60,12 +60,10 @@ export default function HomePage(props) {
 
     function getIconCard(src, name) {
         return (
-            <Card>
-                <Card.Body>
-                    <Card.Img src={src} className="s" />
-                    <Card.Title className="t">{name}</Card.Title>
-                </Card.Body>
-            </Card>
+            <div id={"i"+ ++i} >
+                <img src={src} className="s" alt="icon"/>
+                <h5 className="t">{name}</h5>
+            </div>
         );
     }
 
@@ -112,13 +110,10 @@ export default function HomePage(props) {
             <Search />
         </div> 
 
-        <div id="subjects">
-            <h1> ? איזה נושא מעניין אותך </h1>
-            <div id="icons">
-                <CardColumns>
-                    {ICONS.map(icon => getIconCard(icon.src, icon.name))}
-                </CardColumns>
-            </div>
+        <div id="icons">
+            <h1 style={{gridArea:"h"}}> ? איזה נושא מעניין אותך </h1>        
+                    {ICONS.map(icon => getIconCard(icon.src, icon.name))}    
+           
         </div>
         <div id="news">
             <h1 className="h1 col-md-12">!רוצה להיות מעודכן בתוכן החדש שלנו? הרשם עכשיו</h1>
