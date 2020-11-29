@@ -8,7 +8,8 @@ body {
 }
 #search {
     text-align: center;
-    padding: 3%;
+    padding: 2%;
+    padding-bottom:7% ;
     background-color:#03233a;
 }
 h1 {
@@ -73,7 +74,7 @@ h5 {
 }
 p {
     font-size: medium !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     line-height: 1.2rem;
 }
 .h5 {

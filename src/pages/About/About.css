@@ -21,6 +21,7 @@ color:#03233a ;
 font-size: large;
 font-weight: 600;
 text-align: right;
+line-height: normal;
 }
 .row {
 column-count: 2;

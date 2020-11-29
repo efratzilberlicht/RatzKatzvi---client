@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import connect from 'react-dom'
-import PropTypes from 'prop-types'
-import { Carousel, Form, Col, Button, Card, CardColumns } from 'react-bootstrap'
+import React from 'react'
+// import connect from 'react-dom'
+// import PropTypes from 'prop-types'
+import { Carousel, Form, Col, Button, Card } from 'react-bootstrap'
 import Search from '../AdvancedSearch/Search';
 import './HomePage.css';
 
@@ -147,13 +147,13 @@ export default function HomePage(props) {
     </div>);
 }
 //state=store - מושכת את הנתונים
-function mapStateToProps(state) {
+// function mapStateToProps(state) {
 
-};
+// };
 
-function mapDispatchToProps(dispatch) {
+// function mapDispatchToProps(dispatch) {
 
-};
+// };
 
 // export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
 

@@ -1,14 +1,16 @@
-import React, { Component, useState } from 'react'
-import { Col, Row } from 'react-bootstrap';
+import React from 'react'
+import { Row } from 'react-bootstrap';
+import Filter from '../../components/global/Filter/Filter';
 import './About.css';
 
 export default function About(props) {
 
 
   return (<div>
+    <Filter props={"אודות"}/>
     <Row>
       <div id="img">
-        <img src="./images/update.png" />
+        <img src="./images/update.png" alt="about"/>
       </div>
       <div id="text">
         <h1>צבי רייזמן - מחבר ספרי רץ כצבי</h1>

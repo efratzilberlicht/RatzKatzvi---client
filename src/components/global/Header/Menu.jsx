@@ -7,7 +7,7 @@ export default function Menu(props) {
         <Nav.Link href="/">דף הבית</Nav.Link>
         <Nav.Link href="/About">אודות</Nav.Link>
         <Nav.Link href="/AdvancedSearch">חיפוש מתקדם</Nav.Link>
-        <Nav.Link href="#home">ספרים</Nav.Link>
+        <Nav.Link href="Books">ספרים</Nav.Link>
         <Nav.Link href="#home">מאמרי מחשבה</Nav.Link>
         <Nav.Link href="#home">שיעורי הלכה</Nav.Link>
         <Nav.Link href="#home">שידור חי</Nav.Link>

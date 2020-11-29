@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { FormControl, Form,  DropdownButton, Dropdown, Button} from 'react-bootstrap';
 import './Search.css';
 
@@ -8,10 +7,8 @@ const subjects = [{id:1, name: "שבת"}, {id:1, name: "פסח"},{id:1, name: "�
 export default function Menu(props) {
     return (
     <Form inline>
-    {/* <Button variant="outline-success" onClick={click}>Search</Button> */}
-     <FormControl type="text" placeholder="חפש כאן" className="mr-sm-2" />
-        <combobox />
-<br></br>
+     <FormControl type="text" placeholder="חיפוש חופשי" className="mr-sm-2" />
+
 <DropdownButton
      id="dropdownSerach"
      title="חפש לפי נושאים"
