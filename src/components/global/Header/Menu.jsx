@@ -12,7 +12,7 @@ export default function Menu(props) {
         <Nav.Link href="#home">שיעורי הלכה</Nav.Link>
         <Nav.Link href="#home">שידור חי</Nav.Link>
         <Nav.Link href="#home">ספרית וידאו</Nav.Link>
-        <Nav.Link href="#home">חנות ספרים</Nav.Link>
+        <Nav.Link href="BooksStore">חנות ספרים</Nav.Link>
         <Nav.Link href="#home">צור קשר</Nav.Link>
     </Navbar>
     );

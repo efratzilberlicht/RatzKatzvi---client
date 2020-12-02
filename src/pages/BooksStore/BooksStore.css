@@ -1,0 +1,17 @@
+#price {
+font-size: smaller !important;
+font-weight: normal !important;
+/* text-align: center; */
+}
+.addTOoCart {
+background-color: #dcc2a1 !important;
+border-color: transparent !important;
+}
+.bookInStore {
+/* background-image:url("C:/Users/User/Desktop/מחשבים/רץ כצבי/חומר לעיצוב/ספרים-ריבוע (1).png") ; */
+display: flex;
+flex-direction: column;
+grid-row: span 2;
+justify-content: center !important;
+box-shadow: thistle;
+}

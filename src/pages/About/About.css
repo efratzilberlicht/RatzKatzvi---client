@@ -1,23 +1,13 @@
-#text{
- float: left;
- padding: 3%;
- width: 50% !important;
-}
-#img {
-float: left; 
-margin-top:10%;
-padding:3%;
-width: 40% !important;           
-} 
-h1 {
-color:#03233a ;
-font-size: 6.5vh;
-text-align: center;
-padding-bottom: 3%;
-font-weight: 700 !important;
+
+#title {
+ color:#03233a ;
+  font-size: 4.5vh !important;
+  text-align: right;
+  margin-bottom: 4%;
+  font-weight: 700;
 }
 p {
-color:#03233a ;
+color:#03233a !important;
 font-size: large;
 font-weight: 600;
 text-align: right;
@@ -26,4 +16,26 @@ line-height: normal;
 .row {
 column-count: 2;
 width: 100%;
+}
+#text{
+  float: right;
+  padding: 3%;
+  padding-right: 12%;
+  padding-left: 5%;
+  width: 60% !important;
+  background-color: rgb(245, 247, 247);
+  position: relative; 
+ }
+#imgAbout {
+height: 70vh;
+z-index: 9;
+float: right;
+margin-top:5%;
+margin-bottom:5%; 
+position: relative;
+right: 6vw; 
+}
+#about {
+padding-right:  8vw; 
+margin:10vh;
 }

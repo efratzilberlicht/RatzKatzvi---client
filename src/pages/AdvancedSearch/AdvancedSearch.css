@@ -9,11 +9,14 @@ margin-right: 15vw;
 padding: 0%;
 }
 #backgroundSearch {
- background-color:#dde2e7;
+ background-color:rgb(240, 240, 240);
  margin-left: 15vw;
  margin-right: 15vw;
  margin-top: 5vh;
  margin-bottom: 4vh;
  padding-bottom: 18vh;
  padding-top: 5vh;
+}
+#resultSearch {
+ height: 50vh;
 }

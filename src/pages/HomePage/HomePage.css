@@ -16,7 +16,6 @@ h1 {
     direction: ltr;
     padding-top: 30px;
     padding-bottom: 7px  !important;
-    /* font-size: 6.5vh; */
 }
 .h1 {
     color: white;
@@ -26,11 +25,12 @@ h5 {
     padding-bottom: 15px  !important;
 }
 .s {
-    width: 33% !important;
+    width: 70% !important;
 }
 .t {
-    color:#03233a ;
-    width: 35%;
+    color:#03233a;
+    /* font-weight: 600; */
+    font-size: x-large;
 }
 .title {
     padding-right: 12.5%;
@@ -38,19 +38,19 @@ h5 {
     text-align: right;
     padding-bottom: 0%;
     font-weight: 650;
-    font-size: 6.5vh;
+    font-size: 6vh;
+}
+.centerBlueTitle {
+    text-align: center;
+    font-weight: 650;
+    margin-bottom: 5vh;
 }
 .kav {
     width: 91%;
     padding-right:0% !important;
 }
-/* #cardColumns {
-    column-count: 4 !important;
-    margin-left: 11% !important;
-    margin-right: 11% !important;
-} */
+
 .updateCard {
-    /* width: 20vw; */
     padding: 0% !important;
     text-align: right;
     direction: rtl;
@@ -58,7 +58,6 @@ h5 {
 }
 .updateImg {
     padding-bottom: 5%;
-    /* width: 17vw; */
 }
 .card-title {
     margin-bottom: 0.3rem !important;
@@ -92,118 +91,30 @@ p {
 }
 .input {
     color:#d1ba9b !important;
-    width: 80% !important;
     box-shadow: none !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     border-color: white !important;
+    width: 80% !important;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 }
 .form-row {
     padding-top: 35px;
     padding-bottom: 25px;
+    margin-right: 17vw !important;
 }
 .btn {
     background-color: #03233a !important;
     width: 80% !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     border-color:#03233a !important;
     box-shadow:none !important;
+    margin-right: 0.5%;
 }
 #icons {
-    
-
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    /* grid-template-rows:  repeat(6, auto); */
-    /* grid-template-rows: 40px auto auto auto auto 40px; */
-    grid-template-areas: 
-    "* * h h h h h h * *"
-    "* * * * * * * * * *"
-    "* 4 4 3 3 2 2 1 1 *"
-    "* 4 4 3 3 2 2 1 1 *"
-    "9 9 8 8 7 7 6 6 5 5"
-    "9 9 8 8 7 7 6 6 5 5" !important;
-    grid-gap: 3px;
-    height: 100%; 
+    margin-top:5vh;
+    margin-bottom: 10vh;
 }
-#i1 {
-    grid-area: 1;
-    display: flex;
+#updates {
+    margin-bottom: 6vh;
 }
-#i2 {
-    grid-area: 2;
-    display: flex;
-}
-#i3 {
-    grid-area: 3;
-    display: flex;
-}
-#i4 {
-    grid-area: 4;
-    display: flex;
-}
-#i5 {
-    grid-area: 5;
-    display: flex;
-}#i6 {
-    grid-area: 6;
-    display: flex;
-}#i7 {
-    grid-area:7;
-    display: flex;
-}#i8 {
-    grid-area: 8;
-    display: flex;
-}#i9 {
-    grid-area: 9;
-    display: flex;
-}
-
-/* @media (min-width: 576px) { 
-
-    .therapists_table{
-    height: 100%;
-    display: grid;
-    grid-gap:10px;
-    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
-    grid-auto-rows: 125px;
-    justify-content: space-evenly;
-    padding-right: 60px;
-    padding-left: 60px;
-}
-
-.therapistCard{
-    background-color:white;
-    width: 115px;
-    height: 125px;
-   
-    box-shadow: 0 0 4px 1px #6c757d;
-    text-align: -webkit-center;
-    display: flex;
-    flex-direction: column;
-    
-}
-}
-@media (min-width: 1200px) { 
-    .therapists_table{
-        height: 100%;
-        display: grid;
-        grid-gap:10px;
-        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-        grid-auto-rows: 125px;
-        justify-content: space-evenly;
-        padding-right: 120px;
-        padding-left: 120px;
-    }
-    
-    .therapistCard{
-        background-color:white;
-        width: 225px;
-        height: 250px;
-        box-shadow: 0 0 4px 1px #6c757d;
-        text-align: -webkit-center;
-        display: flex;
-        flex-direction: column;
-        
-        grid-row: span 2;
-    }
-} */

@@ -15,6 +15,7 @@ export default function AdvancedSearch(props) {
     <div dir="rtl">
     <h2 className="h2">תוצאות החיפוש</h2>
     <img alt="kavyaeli" src="/images/kavyaeli.png" className="kav" />
+    <div id="resultSearch"></div>
     </div>
   </div>
   );

@@ -1,6 +1,8 @@
 
-let itemId ; 
-let itemKind ;
-let subjectId ;
-let contextUrl; 
-let itemName;
+export class Item {
+ itemId; 
+ itemKind;
+ subjectId;
+ contextUrl; 
+ itemName;
+}
