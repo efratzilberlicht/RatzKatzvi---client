@@ -12,11 +12,11 @@ import * as actions from './actions';
 
 function App() {
   
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(actions.init.request());
-  // }, [])
+  useEffect(() => {
+    dispatch(actions.init.request());
+  }, [])
 
   return (
     <div>

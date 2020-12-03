@@ -1,41 +1,5 @@
 import { call, put, takeLatest, takeEvery } from 'redux-saga/effects';
 import request from 'utils/request';
-import {
-  booksLoaded,
-  booksLoadingError,
-  getBookSuccess,
-  getBookError,
-  addBookSuccess,
-  addBookError,
-  updateBookSuccess,
-  updateBookError,
-  deleteBookSuccess,
-  deleteBookError,
-  subjectsLoaded,
-  subjectsLoadingError,
-  getSubjectSuccess,
-  getSubjectError,
-  addSubjectSuccess,
-  addSubjectError,
-  updateSubjectSuccess,
-  updateSubjectError,
-  deleteSubjectSuccess,
-  deleteSubjectError,
-  shiurimLoaded,
-  shiurimLoadingError,
-  getShiurSuccess,
-  getShiurError,
-  addShiurSuccess,
-  addShiurError,
-  updateShiurSuccess,
-  updateShiurError,
-  deleteShiurSuccess,
-  deleteShiurError,
-
-} from './actions';
-import { LOAD_BOOK, GET_BOOK, ADD_BOOK, UPDATE_BOOK, DELETE_BOOK,
-LOAD_SUBJECT, GET_SUBJECT, ADD_SUBJECT, UPDATE_SUBJECT, DELETE_SUBJECT,
-LOAD_SHIUR, GET_SHIUR, ADD_SHIUR, UPDATE_SHIUR, DELETE_SHIUR,} from './constants';
 import { all, call } from 'redux-saga/effects';
 import * as actions from './actions';
 
@@ -43,10 +7,13 @@ const baseUrl = '/api';
  export function* init() {
     try {
       yield all([
-      call(getBookList()),
-      call(getShiurList()),
+      call(getBooksList()),
+      call(getSubjectsList()),
+      call(getShiurimList())
     ]);
-      yield put(actions.getBooks.success())
+      yield put(actions.getBooksList.success());
+      yield put(actions.getSubjectsList.success());
+      yield put(actions.getShiurimList.success());
     } catch(e) {
         yield
     }
