@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/global/Header/Header";
 import HomePage from "./pages/HomePage/HopePage";
@@ -12,19 +12,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from "./actions";
 
 function App() {
-// <<<<<<< HEAD
+
   
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(actions.init.request());
+  }, [])
+// <<<<<<< HEAD=======
   // const dispatch = useDispatch();
 
   // useEffect(() => {
   //   dispatch(actions.init.request());
-  // }, [])
-// =======
-//   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     dispatch(actions.init.request());
-//   }, []);
+  // }, []);
 // >>>>>>> bf458d2926ff7e6796d71fb1240572ee65814f8e
 
   return (

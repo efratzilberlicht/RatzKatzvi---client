@@ -18,7 +18,7 @@ export default function Book(props) {
         alt="book"
         onClick={newWindow}
       />
-      <p>{props.book.name}</p>
+      <p>{props.book.ItemName}</p>
       <Button variant="success" className="download" onClick={saveFile}>
         {" "}
         להורדת PDF
