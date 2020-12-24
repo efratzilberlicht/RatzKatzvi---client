@@ -11,11 +11,8 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {rootSaga} from './rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
-
 const enhancer = composeWithDevTools(applyMiddleware(sagaMiddleware));
-
 const store = createStore(rootReducer, enhancer);
-
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(

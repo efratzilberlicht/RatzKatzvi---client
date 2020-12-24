@@ -4,25 +4,27 @@ import * as actions from './actions';
 import { getType } from 'typesafe-actions';
 
 const baseUrl = 'https://localhost:44392/api';
- export function* init() {
-    try {
-      yield all([
+export function* init() {
+  try {
+    yield all([
       call(getBooksList),
-      // call(getSubjectsList()),
-      // call(getShiurimList())
+      call(getSubjectsList()),
+      call(getShiurimList()),
+      call(getVideoList()),
+      call(getPicturesList())
     ]);
-     yield put(actions.init.success());
-      // yield put(actions.getBooksList.success());
-      // yield put(actions.getSubjectsList.success());
-      // yield put(actions.getShiurimList.success());
-    } catch(err) {
-        yield put(actions.init.error(err));
-    }
- }
+    yield put(actions.init.success());
+    // yield put(actions.getBooksList.success());
+    // yield put(actions.getSubjectsList.success());
+    // yield put(actions.getShiurimList.success());
+  } catch (err) {
+    yield put(actions.init.error(err));
+  }
+}
 
 //Books
 export function* getBooksList() {
-  const requestURL = `${baseUrl}/Items`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/{1}`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -31,6 +33,55 @@ export function* getBooksList() {
     yield put(actions.getBooksList.error(err));
   }
 }
+
+//Subjects 
+export function* getSubjectsList() {
+  const requestURL = `${baseUrl}/subjects`;
+  try {
+    const list = yield call(fetch, requestURL);
+    const listJson = yield list.json();
+    yield put(actions.getSubjectsList.success(listJson));
+  } catch (err) {
+    yield put(actions.getSubjectsList.error(err));
+  }
+}
+
+//Shiurim
+export function* getShiurimList() {
+  const requestURL = `${baseUrl}/items/GetItemsByKind/{4}`;
+  try {
+    const list = yield call(fetch, requestURL);
+    const listJson = yield list.json();
+    yield put(actions.getShiurimList.success(listJson));
+  } catch (err) {
+    yield put(actions.getShiurimList.error(err));
+  }
+}
+
+//Video
+export function* getVideoList() {
+  const requestURL = `${baseUrl}/items/GetItemsByKind/{3}`;
+  try {
+    const list = yield call(fetch, requestURL);
+    const listJson = yield list.json();
+    yield put(actions.getVideoList.success(listJson));
+  } catch (err) {
+    yield put(actions.getVideoList.error(err));
+  }
+}
+
+//Pictures
+export function* getPicturesList() {
+  const requestURL = `${baseUrl}/items/GetItemsByKind/{4}`;
+  try {
+    const list = yield call(fetch, requestURL);
+    const listJson = yield list.json();
+    yield put(actions.getPicturesList.success(listJson));
+  } catch (err) {
+    yield put(actions.getPicturesList.error(err));
+  }
+}
+
 
 // export function* updateBook(action) {
 //   const requestURL = `${baseUrl}/updateBook/${action.bookId}`;
@@ -180,10 +231,10 @@ export function* getBooksList() {
 //       yield put(shiurimLoadingError(err));
 //     }
 //   }
-  
+
 //   export function* getShiur(action) {
 //     const requestURL = `${baseUrl}/getShiur/${action.shiurId}`;
-  
+
 //     try {
 //       const shiur = yield call(request, requestURL);
 //       yield put(getShiurSuccess(shiur));
@@ -191,7 +242,7 @@ export function* getBooksList() {
 //       yield put(getShiurError(err));
 //     }
 //   }
-  
+
 //   export function* updateShiur(action) {
 //     const requestURL = `${baseUrl}/updateShiur/${action.shiurId}`;
 //     const options = {
@@ -208,7 +259,7 @@ export function* getBooksList() {
 //       yield put(updateShiurError(err));
 //     }
 //   }
-  
+
 //   export function* deleteShiur(action) {
 //    const requestURL = `${baseUrl}/deleteShiur/${action.shiurId}`;
 //    const options = {
@@ -224,7 +275,7 @@ export function* getBooksList() {
 //      yield put(deleteShiurError(err));
 //    }
 //    }
-  
+
 //   export function* addShiur(action) {
 //     const requestURL = `${baseUrl}/addShiur`;
 //     const options = {
@@ -234,7 +285,7 @@ export function* getBooksList() {
 //       },
 //       body: JSON.stringify(action.shiur),
 //     };
-  
+
 //     try {
 //       const shiurimList = yield call(request, requestURL, options);
 //       yield put(addShiurSuccess(action.shiur, shiurimList));
@@ -242,21 +293,21 @@ export function* getBooksList() {
 //       yield put(addShiurError(err));
 //     }
 //   }
-  
-  // export default function* loadShiurimData() {
-  //   yield takeLatest(LOAD_SHIUR, getShiurList);
-  //   yield takeEvery(ADD_SHIUR, addShiur);
-  //   yield takeEvery(GET_SHIUR, getShiur);
-  //   yield takeEvery(UPDATE_SHIUR, updateShiur);
-  //   yield takeEvery(DELETE_SHIUR, deleteShiur);
-  // }
-     
-  function* watchInit() {
-     yield takeLatest(getType(actions.init.request), init)
-  }
 
-  export default function* watchSaga() {
-    yield all([
-      watchInit(),
-    ])
-  }
+// export default function* loadShiurimData() {
+//   yield takeLatest(LOAD_SHIUR, getShiurList);
+//   yield takeEvery(ADD_SHIUR, addShiur);
+//   yield takeEvery(GET_SHIUR, getShiur);
+//   yield takeEvery(UPDATE_SHIUR, updateShiur);
+//   yield takeEvery(DELETE_SHIUR, deleteShiur);
+// }
+
+function* watchInit() {
+  yield takeLatest(getType(actions.init.request), init)
+}
+
+export default function* watchSaga() {
+  yield all([
+    watchInit(),
+  ])
+}

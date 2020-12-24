@@ -19,13 +19,6 @@ function App() {
   useEffect(() => {
     dispatch(actions.init.request());
   }, [])
-// <<<<<<< HEAD=======
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(actions.init.request());
-  // }, []);
-// >>>>>>> bf458d2926ff7e6796d71fb1240572ee65814f8e
 
   return (
     <div>
