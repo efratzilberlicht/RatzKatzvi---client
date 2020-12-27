@@ -12,7 +12,7 @@ export const initialState = {
   videoList: [],
   picturesList: [],
   currentSubject: false,
-  shiurimList: false,
+  shiurimList: [],
   currentShiur: false,
 };
 
@@ -20,7 +20,6 @@ export const appReducer = (state = initialState, action) =>
   produce(state, draft => {
 
     switch (action.type) {
-      // מקרה של כישלון טוב? כי הוספתי
       //init
       case getType(actions.init.request):
         return {
@@ -34,7 +33,7 @@ export const appReducer = (state = initialState, action) =>
           loading: false,
         }
 
-      case getType(actions.init.error):
+      case getType(actions.init.failure):
         return {
           ...state,
           loading: false,
@@ -54,7 +53,7 @@ export const appReducer = (state = initialState, action) =>
           booksList: action.payload
         }
 
-      case getType(actions.getBooksList.error):
+      case getType(actions.getBooksList.failure):
         return {
           ...state,
           loading: false,
@@ -71,10 +70,10 @@ export const appReducer = (state = initialState, action) =>
         return {
           ...state,
           loading: false,
-          booksList: action.payload
+          subjectsList: action.payload
         }
 
-      case getType(actions.getSubjectsList.error):
+      case getType(actions.getSubjectsList.failure):
         return {
           ...state,
           loading: false,
@@ -94,7 +93,7 @@ export const appReducer = (state = initialState, action) =>
           booksList: action.payload
         }
 
-      case getType(actions.getShiurimList.error):
+      case getType(actions.getShiurimList.failure):
         return {
           ...state,
           loading: false,
@@ -114,7 +113,7 @@ export const appReducer = (state = initialState, action) =>
           booksList: action.payload
         }
 
-      case getType(actions.getVideoList.error):
+      case getType(actions.getVideoList.failure):
         return {
           ...state,
           loading: false,
@@ -134,7 +133,7 @@ export const appReducer = (state = initialState, action) =>
           booksList: action.payload
         }
 
-      case getType(actions.getPicturesList.error):
+      case getType(actions.getPicturesList.failure):
         return {
           ...state,
           loading: false,

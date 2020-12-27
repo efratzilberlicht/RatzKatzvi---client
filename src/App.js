@@ -13,11 +13,12 @@ import * as actions from "./actions";
 
 function App() {
 
-  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(actions.init.request());
+    console.log("aaa");
   }, [])
 
   return (

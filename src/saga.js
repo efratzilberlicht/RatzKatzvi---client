@@ -1,5 +1,4 @@
-import { all, call, put, takeLatest, takeEvery } from 'redux-saga/effects';
-import request from './request';
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 import * as actions from './actions';
 import { getType } from 'typesafe-actions';
 
@@ -8,29 +7,26 @@ export function* init() {
   try {
     yield all([
       call(getBooksList),
-      call(getSubjectsList()),
-      call(getShiurimList()),
-      call(getVideoList()),
-      call(getPicturesList())
+      call(getSubjectsList),
+      call(getShiurimList),
+      call(getVideoList),
+      call(getPicturesList)
     ]);
     yield put(actions.init.success());
-    // yield put(actions.getBooksList.success());
-    // yield put(actions.getSubjectsList.success());
-    // yield put(actions.getShiurimList.success());
   } catch (err) {
-    yield put(actions.init.error(err));
+    yield put(actions.init.failure(err));
   }
 }
 
 //Books
 export function* getBooksList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/{1}`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/1`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
     yield put(actions.getBooksList.success(listJson));
   } catch (err) {
-    yield put(actions.getBooksList.error(err));
+    yield put(actions.getBooksList.failure(err));
   }
 }
 
@@ -42,43 +38,43 @@ export function* getSubjectsList() {
     const listJson = yield list.json();
     yield put(actions.getSubjectsList.success(listJson));
   } catch (err) {
-    yield put(actions.getSubjectsList.error(err));
+    yield put(actions.getSubjectsList.failure(err));
   }
 }
 
 //Shiurim
 export function* getShiurimList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/{4}`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/4`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
     yield put(actions.getShiurimList.success(listJson));
   } catch (err) {
-    yield put(actions.getShiurimList.error(err));
+    yield put(actions.getShiurimList.failure(err));
   }
 }
 
 //Video
 export function* getVideoList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/{3}`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/3`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
     yield put(actions.getVideoList.success(listJson));
   } catch (err) {
-    yield put(actions.getVideoList.error(err));
+    yield put(actions.getVideoList.failure(err));
   }
 }
 
 //Pictures
 export function* getPicturesList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/{4}`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/5`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
     yield put(actions.getPicturesList.success(listJson));
   } catch (err) {
-    yield put(actions.getPicturesList.error(err));
+    yield put(actions.getPicturesList.failure(err));
   }
 }
 
@@ -96,7 +92,7 @@ export function* getPicturesList() {
 //     const list = yield call(request, requestURL, options);
 //     yield put(updateBookSuccess(action.bookId, list));
 //   } catch (err) {
-//     yield put(updateBookError(err));
+//     yield put(updateBookfailure(err));
 //   }
 // }
 
