@@ -6,7 +6,12 @@ import HomePage from "./pages/HomePage/HopePage";
 import About from "./pages/About/About";
 import AdvancedSearch from "./pages/AdvancedSearch/AdvancedSearch";
 import Books from "./pages/Books/Books";
+import MachshavaArticals from "./pages/Shiurim/MachshavaArticals";
+import HalachShiurim from "./pages/Shiurim/HalachShiurim";
+import LiveBroadcast from "./pages/LiveBroadcast/LiveBroadcast";
+import VideoLibrary from "./pages/VideoLibrary/VideoLibrary";
 import BooksStore from "./pages/BooksStore/BooksStore";
+import Contact from "./pages/Contact/Contact";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from "./actions";
@@ -18,7 +23,6 @@ function App() {
 
   useEffect(() => {
     dispatch(actions.init.request());
-    console.log("aaa");
   }, [])
 
   return (
@@ -29,11 +33,12 @@ function App() {
           <Route path="/About" component={About} />
           <Route path="/AdvancedSearch" component={AdvancedSearch} />
           <Route path="/Books" component={Books} />
+          <Route path="/HalachShiurim" component={HalachShiurim} />
+          <Route path="/LiveBroadcast" component={LiveBroadcast} /> 
+          <Route path="/VideoLibrary" component={VideoLibrary} />
           <Route path="/BooksStore" component={BooksStore} />
-          {/*<Route path="/" component={} />
-        <Route path="/" component={} />
-        <Route path="/" component={} />
-        <Route path="/" component={} /> */}
+          <Route path="/MachshavaArticals" component={MachshavaArticals} /> 
+          <Route path="/Contact" component={Contact} />
           <Route path="/" component={HomePage} />
         </Switch>
       </Router>

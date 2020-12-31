@@ -7,13 +7,13 @@ export default function Menu(props) {
         <Nav.Link href="/">דף הבית</Nav.Link>
         <Nav.Link href="/About">אודות</Nav.Link>
         <Nav.Link href="/AdvancedSearch">חיפוש מתקדם</Nav.Link>
-        <Nav.Link href="Books">ספרים</Nav.Link>
-        <Nav.Link href="#home">מאמרי מחשבה</Nav.Link>
-        <Nav.Link href="#home">שיעורי הלכה</Nav.Link>
-        <Nav.Link href="#home">שידור חי</Nav.Link>
-        <Nav.Link href="#home">ספרית וידאו</Nav.Link>
-        <Nav.Link href="BooksStore">חנות ספרים</Nav.Link>
-        <Nav.Link href="#home">צור קשר</Nav.Link>
+        <Nav.Link href="/Books">ספרים</Nav.Link>
+        <Nav.Link href="/MachshavaArticals">מאמרי מחשבה</Nav.Link>
+        <Nav.Link href="/HalachShiurim">שיעורי הלכה</Nav.Link>
+        <Nav.Link href="/LiveBroadcast">שידור חי</Nav.Link>
+        <Nav.Link href="/VideoLibrary">ספרית וידאו</Nav.Link>
+        <Nav.Link href="/BooksStore">חנות ספרים</Nav.Link>
+        <Nav.Link href="/Contact">צור קשר</Nav.Link>
     </Navbar>
     );
 }

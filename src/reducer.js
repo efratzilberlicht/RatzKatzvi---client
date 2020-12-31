@@ -90,7 +90,7 @@ export const appReducer = (state = initialState, action) =>
         return {
           ...state,
           loading: false,
-          booksList: action.payload
+          shiurimList: action.payload
         }
 
       case getType(actions.getShiurimList.failure):
@@ -98,7 +98,7 @@ export const appReducer = (state = initialState, action) =>
           ...state,
           loading: false,
         }
-     
+
       //Video
       case getType(actions.getVideoList.request):
         return {
@@ -110,7 +110,7 @@ export const appReducer = (state = initialState, action) =>
         return {
           ...state,
           loading: false,
-          booksList: action.payload
+          videoList: action.payload
         }
 
       case getType(actions.getVideoList.failure):
@@ -118,7 +118,7 @@ export const appReducer = (state = initialState, action) =>
           ...state,
           loading: false,
         }
-      
+
       //Pictures
       case getType(actions.getPicturesList.request):
         return {
@@ -130,7 +130,7 @@ export const appReducer = (state = initialState, action) =>
         return {
           ...state,
           loading: false,
-          booksList: action.payload
+          picturesList: action.payload
         }
 
       case getType(actions.getPicturesList.failure):
@@ -138,10 +138,10 @@ export const appReducer = (state = initialState, action) =>
           ...state,
           loading: false,
         }
-      
+
       default:
 
-}
+    }
   });
 
 export default appReducer;

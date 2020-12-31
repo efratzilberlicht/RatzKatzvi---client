@@ -21,6 +21,16 @@ const ICONS = [{ src: "./images/poriut.png", name: "פוריות ויוחסין"
 { src: "./images/avelut.png", name: "אבלות" },
 { src: "./images/machshava.png", name: "מחשבה" }]
 
+// const ICONS = [{ src: "./images/poriut.png" },
+// { src: "./images/actualation.png"},
+// { src: "./images/yearcircle.png" },
+// { src: "./images/weaman.png"},
+// { src: "./images/life.png" },
+// { src: "./images/shabat.png" },
+// { src: "./images/chehuna.png" },
+// { src: "./images/avelut.png"},
+// { src: "./images/machshava.png" }]
+
 const UPDATES = [{
     src: "./images/update.png", title: "חדשות",
     text: "This is a wider card with supporting text below as a natural additional content. with supporting text below as"

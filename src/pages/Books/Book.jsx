@@ -8,7 +8,7 @@ export default function Book(props) {
   FileSaver.saveAs(props.book.srcPDF, props.book.srcPDF);
   };
   const newWindow = () => {
-    let newWindow = window.open(props.book.srcPDF);
+    window.open(props.book.srcPDF);
   };
   return (
     <div className="book align-items-md-center">
@@ -18,7 +18,7 @@ export default function Book(props) {
         alt="book"
         onClick={newWindow}
       />
-      <p>{props.book.ItemName}</p>
+      <p className="bookName">{props.book.ItemName}</p>
       <Button variant="success" className="download" onClick={saveFile}>
         {" "}
         להורדת PDF

@@ -1,11 +1,14 @@
 import React from 'react'
-import { FormControl, Form,  DropdownButton, Dropdown, Button} from 'react-bootstrap';
+import { useSelector } from 'react-redux'
+import { FormControl, Form,  DropdownButton, Dropdown} from 'react-bootstrap';
 import './Search.css';
 
-const subjects = [{id:1, name: "שבת"}, {id:1, name: "פסח"},{id:1, name: "אבלות"}]
+// const subjects = [{id:1, name: "שבת"}, {id:1, name: "פסח"},{id:1, name: "אבלות"}]
+
 
 export default function Menu(props) {
-    return (
+  const {subjectsList} = useSelector((state) => state.reducer); 
+  return (
     <Form inline>
      <FormControl type="text" placeholder="חיפוש חופשי" className="mr-sm-2" />
 
@@ -16,13 +19,13 @@ export default function Menu(props) {
     //    handleChange(JSON.parse(eventKey));
     //  }}
    >
-     {subjects.map(subject => (
+     {subjectsList.map(subject => (
            <Dropdown.Item
              id="dropItem"
-             //eventKey={JSON.stringify(matched)}
-             key={subject.id}
+             eventKey={JSON.stringify(subject)}
+             key={subjectsList.SubjectId}
            >
-             {subject.name}
+             {subject.Subject}
            </Dropdown.Item>
          ))}
    </DropdownButton>

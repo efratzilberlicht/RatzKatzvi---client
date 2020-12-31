@@ -1,10 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Card, CardColumns, Button,Container, Row} from 'react-bootstrap'
-import './Shiur.css';
+import './Shiurim.css';
 
 export default function Shiur(props) {
-    return (<CardColumns>
+    return (
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CardColumns>
        <Container>
   <Row>
   <Card>
@@ -108,5 +126,6 @@ export default function Shiur(props) {
   </Row>
 </Container>
         
-    </CardColumns>);
+    </CardColumns>
+);
 }

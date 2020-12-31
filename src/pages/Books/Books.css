@@ -17,6 +17,9 @@ p {
     font-weight: 700 !important;
     /* padding-right: 5%; */
 }
+.bookName {
+    text-align: center;
+}
 @media (min-width: 550px) { 
     #bookList{
         height: 100%;
