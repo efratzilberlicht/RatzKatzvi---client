@@ -18,7 +18,7 @@ font-size: 2vh !important;
 line-height: 1.15rem;
 }
 .shiurButton {
- background-color: #dcc2a1 !important;
+ background-color: rgb(193, 170, 134) !important;
  border-color: transparent !important;
  position: relative;
 }

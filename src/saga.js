@@ -44,7 +44,7 @@ export function* getSubjectsList() {
 
 //Shiurim
 export function* getShiurimList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/3`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/4`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -56,7 +56,7 @@ export function* getShiurimList() {
 
 //Video
 export function* getVideoList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/2`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/3`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -68,7 +68,7 @@ export function* getVideoList() {
 
 //Pictures
 export function* getPicturesList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/4`;
+  const requestURL = `${baseUrl}/items/GetItemsByKind/5`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
