@@ -18,8 +18,13 @@ export default function Book(props) {
         alt="book"
         onClick={newWindow}
       />
+
+
+    {/* <video src="https://www.kolhalashon.com/new/Media/PlayShiur.aspx?FileName=30790242&Video=True" controls="controls" autoplay="autoplay" onClick={newWindow}>
+    Your browser does not support the video tag
+</video> */}
       <p className="bookName">{props.book.ItemName}</p>
-      <Button variant="success" className="download" onClick={saveFile}>
+      <Button variant="success" className="download hvr-grow" onClick={saveFile}>
         {" "}
         להורדת PDF
       </Button>

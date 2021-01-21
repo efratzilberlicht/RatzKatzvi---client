@@ -11,7 +11,7 @@ export default function Shiur(props) {
     window.open(props.book.srcPDF);
   };
   return (
-    <div className="shiur align-items-md-center">
+    <div className="shiur">
       <img
         src={props.shiur.src}
         className="ShiurImg"
@@ -20,15 +20,20 @@ export default function Shiur(props) {
       />
       <h4>{props.shiur.ItemName}</h4>
       <p className="summary">{props.shiur.Summary}</p>
+      
       <div id="shiurButtons">               
-      <p className="downloadTitle">להורדה:</p>
-      <Button variant="success" id="shiurbtn1" className="shiurButton col-md-5" onClick={saveFile}>
-        PDF שיעור  
-      </Button>
-      <Button variant="success" id="shiurbtn2" className="shiurButton col-md-8" onClick={saveFile}>
-         PDF מראה מקומות   
-      </Button>
+      {/* <p className="downloadTitle">להורדה:</p> */}
+      <button id="downloadTitle" className="shiurButton">להורדה:</button>
+      {/* onClick={saveFile} */}
+      <button id="shiurbtn1" className="shiurButton hvr-grow" >PDF שיעור</button>
+      <button id="shiurbtn2" className="shiurButton hvr-grow" >PDF מראה מקומות </button>
       </div>
     </div>
   );
 }
+      {/* <Button variant="success" id="shiurbtn1" className="shiurButton col-md-5" onClick={saveFile}>
+        PDF שיעור  
+      </Button>
+      <Button variant="success" id="shiurbtn2" className="shiurButton col-md-8" onClick={saveFile}>
+         PDF מראה מקומות   
+      </Button> */}

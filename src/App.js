@@ -12,6 +12,8 @@ import LiveBroadcast from "./pages/LiveBroadcast/LiveBroadcast";
 import VideoLibrary from "./pages/VideoLibrary/VideoLibrary";
 import BooksStore from "./pages/BooksStore/BooksStore";
 import Contact from "./pages/Contact/Contact";
+import Subjects from "./pages/Subjects/Subjects";
+import ShiurimBySubject from "./pages/Shiurim/ShiurimBySubject";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from "./actions";
@@ -34,11 +36,13 @@ function App() {
           <Route path="/AdvancedSearch" component={AdvancedSearch} />
           <Route path="/Books" component={Books} />
           <Route path="/HalachShiurim" component={HalachShiurim} />
-          <Route path="/LiveBroadcast" component={LiveBroadcast} /> 
+          <Route path="/LiveBroadcast" component={LiveBroadcast} />
           <Route path="/VideoLibrary" component={VideoLibrary} />
           <Route path="/BooksStore" component={BooksStore} />
           <Route path="/MachshavaArticals" component={MachshavaArticals} /> 
           <Route path="/Contact" component={Contact} />
+          <Route path="/Subjects" component={Subjects} />
+          <Route path="/ShiurimBySubject" component={ShiurimBySubject} />
           <Route path="/" component={HomePage} />
         </Switch>
       </Router>

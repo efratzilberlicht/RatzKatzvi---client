@@ -14,7 +14,7 @@ export default function BookInStore(props) {
                <p id="price"> {props.book.price} ש"ח
                 </p>
                {/* <button type="submit" className="addTOoCart">הוספה לסל</button> */}
-                <Button variant="success" className="addTOoCart">הוספה לסל</Button>
+                <Button variant="success" className="addTOoCart hvr-pulse">הוספה לסל</Button>
            </div>
     );
 }

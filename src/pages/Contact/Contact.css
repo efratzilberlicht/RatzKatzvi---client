@@ -43,12 +43,18 @@ font-weight: 400 !important;
 font-size: 3vh !important;
 line-height: 1.5rem;
 }
-.textarea {
+#textarea {
  margin-top: 1.5%;
  color:rgb(186,151,55) !important;
  border: 0px solid white !important;
  border-radius: 0px !important;
  margin-right: 0.5%;
+ 
+}
+#textarea:focus {
+  box-shadow: none !important;
+  /* background-color: yellow; */
+  border-color:white !important;
 }
 #contact_kav {
  height: 43vh;
@@ -62,6 +68,7 @@ line-height: 1.5rem;
 #contact_text {
   margin-top: 3%;
 }
+
 #contact_form {
   /* float: left; */
   /* display: inline-block; */
@@ -82,32 +89,3 @@ line-height: 1.5rem;
  height: 5vh !important;
  padding: 0% !important; 
 }
-/* * {
-                  box-sizing: border-box;
-}
-               input[type=text],input[type=email],input[type=tel] select, textarea {
-                   width: 100%;
-                   padding: 12px;
-                   border: 1px solid #ccc;
-                   border-radius: 4px;
-                   box-sizing: border-box;
-                   margin-top: 6px;
-                   margin-bottom: 16px;
-                   resize: vertical;
-              }
-               input[type=submit] {
-                   background-color: #4CAF50;
-                   color: white;
-                   padding: 12px 20px;
-                   border: none;
-                   border-radius: 4px;
-                   cursor: pointer;
-              }
-               input[type=submit]:hover {
-                   background-color: #45a049;
-              }
-               .container {
-                   border-radius: 5px;
-                   background-color: #f2f2f2;
-                   padding: 20px;
-              } */

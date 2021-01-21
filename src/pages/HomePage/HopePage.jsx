@@ -1,7 +1,10 @@
 import React from 'react'
 // import connect from 'react-dom'
 // import PropTypes from 'prop-types'
-import { Carousel, Form, Col, Button, Card } from 'react-bootstrap'
+// import history from 'history';
+// import { useHistory } from "react-router-dom";
+import HistoryRouter from 'history-router'
+import { Carousel, Form, CardColumns, Col, Button, Card } from 'react-bootstrap'
 import Search from '../AdvancedSearch/Search';
 import './HomePage.css';
 import '../../index.css';
@@ -11,25 +14,22 @@ const IMAGES = [{ scr: "/images/HomePage.jpg", position: 'First slide' },
 { scr: "/images/HomePage.jpg", position: 'Third slide' },
 { scr: "/images/shutterstock_1.jpg", position: 'Fourth slide' }]
 
-const ICONS = [{ src: "./images/poriut.png", name: "פוריות ויוחסין" },
-{ src: "./images/actualation.png", name: "אקטואליה בהלכה" },
-{ src: "./images/yearcircle.png", name: "מעגל השנה" },
-{ src: "./images/weaman.png", name: "חיובי נשים" },
-{ src: "./images/life.png", name: "אורח חיים" },
-{ src: "./images/shabat.png", name: "שבת" },
-{ src: "./images/chehuna.png", name: "כהונה" },
-{ src: "./images/avelut.png", name: "אבלות" },
-{ src: "./images/machshava.png", name: "מחשבה" }]
+const ICONS = [{ SubjectId: 1, Subject: "אקטואליה בהלכה", src: "./images/actualia.png" },
+{ SubjectId: 2, Subject: "פוריות ויוחסין", src: "./images/poriut.png" },
+{ SubjectId: 5, Subject: "קטן בהלכה", src: "./images/katan.png" },
+{ SubjectId: 6, Subject: "חיובי נשים", src: "./images/nashim.png" },
+{ SubjectId: 7, Subject: "מעגלי החיים", src: "./images/lifecircle.png" },
+{ SubjectId: 8, Subject: "אורח חיים", src: "./images/life.png" },
+{ SubjectId: 9, Subject: "כהונה", src: "./images/kehuna.png" },
+{ SubjectId: 10, Subject: "שבת", src: "./images/shabbat.png" },
+{ SubjectId: 11, Subject: "מועדים ", src: "./images/moadim.png" },
+{ SubjectId: 12, Subject: "אבלות", src: "./images/avelut.png" },
+{ SubjectId: 13, Subject: "יורה דעה", src: "./images/dea.png" },
+{ SubjectId: 14, Subject: "כשרות", src: "./images/kosher.png" },
+{ SubjectId: 15, Subject: "תשמישי קדושה", src: "./images/kdusha.png" },
+{ SubjectId: 16, Subject: "חושן משפט", src: "./images/mishpat.png" },
+{ SubjectId: 17, Subject: "מחשבה", src: "./images/machshava.png" }]
 
-// const ICONS = [{ src: "./images/poriut.png" },
-// { src: "./images/actualation.png"},
-// { src: "./images/yearcircle.png" },
-// { src: "./images/weaman.png"},
-// { src: "./images/life.png" },
-// { src: "./images/shabat.png" },
-// { src: "./images/chehuna.png" },
-// { src: "./images/avelut.png"},
-// { src: "./images/machshava.png" }]
 
 const UPDATES = [{
     src: "./images/update.png", title: "חדשות",
@@ -51,8 +51,18 @@ const UPDATES = [{
     text: "This is a wider card with supporting text below as a natural additional content. with supporting text below as"
     , time: "שעות 5"
 }]
-var i = 0;
+
 export default function HomePage(props) {
+
+    // https://www.npmjs.com/package/history-router
+   const router = new HistoryRouter()
+
+    function getSubgects(SubjectId) {
+        // let history = useHistory();
+        //  history.push('/Subjects');
+        router.history.push('/Subjects', ({ SubjectId }));
+
+    };
 
     function getCarouselItem(scr, position) {
         return (
@@ -69,11 +79,11 @@ export default function HomePage(props) {
         );
     }
 
-    function getIconCard(src, name) {
+    function getIconCard(SubjectId, Subject, src) {
         return (
-            <div id={"i" + ++i} className="d-flex flex-column align-items-md-center">
-                <img src={src} className="s text-center" alt="icon" />
-                <h5 className="t text-center" >{name}</h5>
+            <div id={SubjectId} className="d-flex flex-column align-items-md-center">
+                <img src={src} className="s text-center hvr-shrink" alt="icon" onClick={() => getSubgects(SubjectId)} />
+                <h5 className="t text-center" >{Subject}</h5>
             </div>
         );
     }
@@ -120,30 +130,24 @@ export default function HomePage(props) {
             <h5> תוכל למצוא בכל השיעורים בהלכה ובמחשבה</h5>
             <Search />
         </div>
-       <div id="icons">
-        <h1 className="centerBlueTitle"> ? איזה נושא מעניין אותך </h1>
-        <div className="col-md-8 m-auto" >
-           <div class="d-flex col-md-10 m-auto">
-
-            {ICONS.slice(0, 4).map(icon => getIconCard(icon.src, icon.name))}
-
-          </div>
-           <div class="d-flex m-auto">
-
-            {ICONS.slice(4).map(icon => getIconCard(icon.src, icon.name))}
-
-           </div>
+        <div id="icons">
+            <h1 className="centerBlueTitle">מאגר נושאים</h1>
+            <div className="d-flex SubIcons" >
+                <CardColumns className="cardColumns">
+                    {ICONS.map(icon => getIconCard(icon.SubjectId, icon.Subject, icon.src))}
+                </CardColumns>
+            </div>
         </div>
-        </div>
+
         <div id="news">
             <h1 className="h1 col-md-12">!רוצה להיות מעודכן בתוכן החדש שלנו? הרשם עכשיו</h1>
             <Form dir="rtl">
                 <Form.Row className="formRow align-items-md-center">
-            
-                        <Form.Control className="input col-md-3" placeholder="שם" />
-                        <Form.Control className="input col-md-3" placeholder="אימייל" />
-                        <Button className="col-md-3" variant="primary" type="submit">שלח</Button>
-                        
+
+                    <Form.Control className="input col-md-3 hvr-grow" placeholder="שם" />
+                    <Form.Control className="input col-md-3 hvr-grow" placeholder="אימייל" />
+                    <Button className="col-md-3 hvr-grow" variant="primary" type="submit">שלח</Button>
+
                 </Form.Row>
             </Form>
         </div>

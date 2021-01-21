@@ -10,8 +10,8 @@ export default function Header(props) {
     
     return (<div className="header">
         <div className="up">
-            <img id="login" src="/images/fulllogin.png" alt="login"/>
-            <img id="searchicon" src="/images/search.png" alt="search" onClick={click} />
+            <img id="login" className="hvr-pulse" src="/images/fulllogin.png" alt="login"/>
+            <img id="searchicon" className="hvr-hang" src="/images/search.png" alt="search" onClick={click} />
         {fromControl ? <Form inline>
             <FormControl id="searcheader" type="text" placeholder="חפש כאן" className="mr-sm-2" /> 
         </Form>: false}

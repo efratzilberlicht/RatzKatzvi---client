@@ -9,8 +9,8 @@ export default function Menu(props) {
         <Nav.Link href="/AdvancedSearch">חיפוש מתקדם</Nav.Link>
         <Nav.Link href="/Books">ספרים</Nav.Link>
         <Nav.Link href="/MachshavaArticals">מאמרי מחשבה</Nav.Link>
-        <Nav.Link href="/HalachShiurim">שיעורי הלכה</Nav.Link>
-        <Nav.Link href="/LiveBroadcast">שידור חי</Nav.Link>
+        <Nav.Link href="/ShiurimBySubject">שיעורי הלכה</Nav.Link>
+        <Nav.Link href="/Subjects">שידור חי</Nav.Link>
         <Nav.Link href="/VideoLibrary">ספרית וידאו</Nav.Link>
         <Nav.Link href="/BooksStore">חנות ספרים</Nav.Link>
         <Nav.Link href="/Contact">צור קשר</Nav.Link>

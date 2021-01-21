@@ -1,0 +1,18 @@
+.suSubject {
+border-bottom: 2px solid #03233a;
+border-top: 2px solid #03233a;
+padding: 3vh;
+}
+.h {
+color: rgb(193, 171, 135) !important;   
+text-align: center !important;            
+}
+#subjectList {
+ margin-top:5vh;
+ margin-bottom:5vh;
+ border-bottom: 2px solid #03233a;
+ border-top: 2px solid #03233a;
+ width:25vw;
+ justify-content: center !important;
+ margin-right: 35vw;
+}

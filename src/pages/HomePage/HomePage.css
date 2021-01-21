@@ -1,6 +1,8 @@
 body {
     text-align: right;
     line-height: 1.3;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .carousel-item {
     height: 60vh;
@@ -9,7 +11,7 @@ body {
 #search {
     text-align: center;
     padding: 2%;
-    padding-bottom:7% ;
+    padding-bottom:8% ;
     background-color:#03233a;
 }
 h1 {
@@ -25,12 +27,13 @@ h5 {
     padding-bottom: 15px  !important;
 }
 .s {
-    width: 70% !important;
+    width: 155px !important;
+    cursor: pointer !important;
 }
 .t {
     color:#03233a;
-    /* font-weight: 600; */
-    font-size: x-large;
+    font-weight: 650;
+    font-size: 1.3rem;
 }
 .title {
     padding-right: 12.5%;
@@ -43,7 +46,7 @@ h5 {
 .centerBlueTitle {
     text-align: center;
     font-weight: 650;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 .kav {
     width: 91%;
@@ -95,8 +98,8 @@ p {
     border-radius: 10px !important;
     border-color: white !important;
     width: 80% !important;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .form-row {
     padding-top: 35px;
@@ -109,12 +112,49 @@ p {
     border-radius: 10px !important;
     border-color:#03233a !important;
     box-shadow:none !important;
-    margin-right: 0.5%;
+    margin-right: 1%;
 }
 #icons {
-    margin-top:5vh;
-    margin-bottom: 10vh;
+    margin-top:3vh;
+    margin-bottom: 7vh;
 }
 #updates {
     margin-bottom: 6vh;
 }
+.cardColumns {
+    column-count: 5 !important;
+}
+.SubIcons {
+    padding-right: 18vw;
+}
+
+.hvr-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  .hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
