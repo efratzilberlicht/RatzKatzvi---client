@@ -1,0 +1,115 @@
+.accordion {
+ font-weight: 700 !important;
+ color:rgb(193, 171, 135)!important;
+ border-bottom: 2px solid #03233a !important;
+ border-top: 2px solid #03233a !important;
+ font-size: 6vh !important;
+ background-color: transparent !important; 
+    width: 100% !important; 
+    /* border-color: transparent !important; */
+    box-shadow: none !important;
+    margin-right: 1%;
+    text-align: right !important;
+    border:none !important;
+}
+.accordion:hover,.accordion:focus, .accordion:active {
+ text-decoration:none !important;
+}
+#manager_menu {
+ width:40wv;
+height: 50vh;
+/* text-align: center; */
+text-align: right;
+margin-top:5vw;
+margin-right: 15vw;
+margin-left: 15vw;
+margin-bottom:5vw;
+}
+.h3 {
+    margin-top: 1.5vh !important;
+    margin-right: 1.5vw !important;
+    padding: 0.5%;
+    /* font-weight: 700 !important; */
+    color:#03233a  ;
+}
+.h3:hover, .h3:focus, .h3:active {
+ text-decoration: underline;
+}
+.h5 {
+  /* margin-top: 1.5vh !important; */
+  /* margin-right: 0%;
+  padding: 0.5%; */
+  font-weight: 500 !important;
+  color:#03233a ;
+  padding-right: 1vw;
+  margin-bottom: 0vw !important;
+}
+.form-control-file {
+ font-size: medium !important;
+ text-align: right !important;
+ justify-content: right !important;
+}
+/* .form-inline {
+ padding-right: 0px !important;                 
+} */
+.file_form {
+ justify-content: right !important;
+} 
+
+.custom-control-label {
+font-size:large !important;
+direction: rtl !important;
+}
+.custom-control-label::after{
+/* background-color:rgb(193, 171, 135) !important; */
+/* background-color:transparent !important;
+border: 0px solid rgb(193, 171, 135) !important; */
+/* border-color: rgb(193, 171, 135) !important; */
+
+}
+
+::after, ::before {
+  box-shadow: none !important;
+  background-color:rgb(193, 171, 135) !important; 
+}
+.hr {
+ background-color:#03233a !important;
+  height: 2px !important;
+  margin-bottom: 0.2px; 
+}
+.btn-link {
+  text-align: center !important;
+}
+#top_hr {
+ margin-right: 2vw;
+ height: 2.5px !important;
+}
+#bottom_hr {
+  margin-right: 2vw;
+}
+#subjects {
+  display: flex;
+  flex-flow: wrap;
+  align-content: flex-start;
+}
+.inner {
+ padding-right: 1vw !important;
+ padding-bottom: 2vw !important;
+}
+#exampleFormControlFile1{
+  margin-right: -9vw !important;
+    width: 20vw;
+    margin-bottom: 2vh !important;
+}
+.sub {
+  justify-content: center !important;
+  align-items: center;
+  display: flex;
+  padding: 0.5%;
+}
+.add {
+  width: 6vw !important;
+  position: absolute !important;
+  margin-top:11vh !important;
+  margin-right:60.5vh !important;
+}

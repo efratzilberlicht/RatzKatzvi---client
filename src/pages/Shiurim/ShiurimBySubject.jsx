@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useSelector } from 'react-redux'
 import Filter from "../../components/global/Filter/Filter";
 import Shiur from "./Shiur";
@@ -11,6 +11,10 @@ const shiurimList = [{ItemId: 1 , ItemName:"פרקי מחשבה", src:"./images/
 ];
 
 export default function ShiurimBySubject(props) {
+
+  useEffect(() => {
+
+  }, []);
 
 //  const {shiurimList} = useSelector((state) => state.reducer);
   return (

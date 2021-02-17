@@ -2,8 +2,8 @@ import React from 'react'
 // import connect from 'react-dom'
 // import PropTypes from 'prop-types'
 // import history from 'history';
-// import { useHistory } from "react-router-dom";
-import HistoryRouter from 'history-router'
+import { useHistory } from "react-router-dom";
+// import HistoryRouter from 'history-router'
 import { Carousel, Form, CardColumns, Col, Button, Card } from 'react-bootstrap'
 import Search from '../AdvancedSearch/Search';
 import './HomePage.css';
@@ -55,12 +55,12 @@ const UPDATES = [{
 export default function HomePage(props) {
 
     // https://www.npmjs.com/package/history-router
-   const router = new HistoryRouter()
+    //const router = new HistoryRouter()
+    let history = useHistory();
+    function getSubgects(SubjectId, Subject) {
 
-    function getSubgects(SubjectId) {
-        // let history = useHistory();
         //  history.push('/Subjects');
-        router.history.push('/Subjects', ({ SubjectId }));
+        history.push(`/Subjects/${SubjectId}/${Subject}`);
 
     };
 
@@ -82,7 +82,7 @@ export default function HomePage(props) {
     function getIconCard(SubjectId, Subject, src) {
         return (
             <div id={SubjectId} className="d-flex flex-column align-items-md-center">
-                <img src={src} className="s text-center hvr-shrink" alt="icon" onClick={() => getSubgects(SubjectId)} />
+                <img src={src} className="s text-center hvr-shrink" alt="icon" onClick={() => getSubgects(SubjectId, Subject)} />
                 <h5 className="t text-center" >{Subject}</h5>
             </div>
         );

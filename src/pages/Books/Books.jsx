@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import Filter from "../../components/global/Filter/Filter";
 import Book from "./Book";
 import "./Books.css";
+import ReactPlayer from 'react-player'
+
 
 const booksList = [
   {
@@ -80,16 +82,16 @@ const booksList = [
     srcPDF: "./images/download book - simulation.pdf",
     name: "חנוכה - פורים",
   },
-  {
-    src: "./images/eitanim.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "ירח האיתנים",
-  },
-  {
-    src: "http://www.bnei-brak.muni.il/SiteCollectionImages/logo.png",
-    srcPDF: "http://www.bnei-brak.muni.il/Service/Documents/%D7%90%D7%92%D7%A3%20%D7%94%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA/195%20%D7%91%D7%99%D7%98%D7%95%D7%9C%20%D7%94.%D7%A7%D7%91%D7%A2%20%D7%91%D7%90%D7%A9%D7%A8%D7%90%D7%99%20-%20%D7%A0%D7%92%D7%99%D7%A9.pdf",
-    name: "ירח האיתנים",
-  },
+  // {
+  //   src: "./images/eitanim.png",
+  //   srcPDF: "./images/download book - simulation.pdf",
+  //   name: "ירח האיתנים",
+  // },
+  // {
+  //   src: "http://www.bnei-brak.muni.il/SiteCollectionImages/logo.png",
+  //   srcPDF: "http://www.bnei-brak.muni.il/Service/Documents/%D7%90%D7%92%D7%A3%20%D7%94%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA/195%20%D7%91%D7%99%D7%98%D7%95%D7%9C%20%D7%94.%D7%A7%D7%91%D7%A2%20%D7%91%D7%90%D7%A9%D7%A8%D7%90%D7%99%20-%20%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  //   name: "ירח האיתנים",
+  // },
 ];
 
 export default function Books(props) {
@@ -100,7 +102,9 @@ export default function Books(props) {
       <Filter props={"ספרים"} />
       <div id="bookList">
 
-
+        {/* <video class="jw-video jw-reset" tabindex="-1" disableremoteplayback="" webkit-playsinline="" playsinline="" src="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" ></video> */}
+        {/* <video autoPlay={true} src="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" type="video/mp4" /> */}
+        {/* <ReactPlayer playing="true" url='https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120' /> */}
         {booksList.map((book) => (
           <Book book={book} key={book.ItemId} />
         ))}

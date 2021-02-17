@@ -20,6 +20,7 @@ export default function Book(props) {
       />
 
 
+
     {/* <video src="https://www.kolhalashon.com/new/Media/PlayShiur.aspx?FileName=30790242&Video=True" controls="controls" autoplay="autoplay" onClick={newWindow}>
     Your browser does not support the video tag
 </video> */}
