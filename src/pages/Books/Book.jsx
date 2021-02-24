@@ -5,15 +5,15 @@ import "./Books.css";
 
 export default function Book(props) {
   const saveFile = () => {
-  FileSaver.saveAs(props.book.srcPDF, props.book.srcPDF);
+  FileSaver.saveAs(props.book.ContextUrl, props.book.ContextUrl);
   };
   const newWindow = () => {
-    window.open(props.book.srcPDF);
+    window.open(props.book.ContextUrl);
   };
   return (
     <div className="book align-items-md-center">
       <img
-        src={props.book.src}
+        src={props.book.ImgUrl}
         className="bookImg"
         alt="book"
         onClick={newWindow}

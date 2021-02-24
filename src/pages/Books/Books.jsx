@@ -8,102 +8,102 @@ import ReactPlayer from 'react-player'
 
 const booksList = [
   {
-    src: "./images/av.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "אבלות",
+    ImgUrl: "./images/av.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "אבלות",
   },
   {
-    src: "./images/monthes.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חדשי השנה - א",
+    ImgUrl: "./images/monthes.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חדשי השנה - א",
   },
   {
-    src: "./images/chanuka.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חנוכה - פורים",
+    ImgUrl: "./images/chanuka.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חנוכה - פורים",
   },
   {
-    src: "./images/eitanim.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "ירח האיתנים",
+    ImgUrl: "./images/eitanim.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "ירח האיתנים",
   },
   {
-    src: "./images/av.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "אבלות",
+    ImgUrl: "./images/av.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "אבלות",
   },
   {
-    src: "./images/monthes.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חדשי השנה - א",
+    ImgUrl: "./images/monthes.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חדשי השנה - א",
   },
   {
-    src: "./images/chanuka.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חנוכה - פורים",
+    ImgUrl: "./images/chanuka.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חנוכה - פורים",
   },
   {
-    src: "./images/eitanim.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "ירח האיתנים",
+    ImgUrl: "./images/eitanim.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "ירח האיתנים",
   },
   {
-    src: "./images/av.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "אבלות",
+    ImgUrl: "./images/av.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "אבלות",
   },
   {
-    src: "./images/monthes.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חדשי השנה - א",
+    ImgUrl: "./images/monthes.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חדשי השנה - א",
   },
   {
-    src: "./images/chanuka.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חנוכה - פורים",
+    ImgUrl: "./images/chanuka.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חנוכה - פורים",
   },
   {
-    src: "./images/eitanim.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "ירח האיתנים",
+    ImgUrl: "./images/eitanim.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "ירח האיתנים",
   },
   {
-    src: "./images/av.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "אבלות",
+    ImgUrl: "./images/av.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "אבלות",
   },
   {
-    src: "./images/monthes.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חדשי השנה - א",
+    ImgUrl: "./images/monthes.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חדשי השנה - א",
   },
   {
-    src: "./images/chanuka.png",
-    srcPDF: "./images/download book - simulation.pdf",
-    name: "חנוכה - פורים",
+    ImgUrl: "./images/chanuka.png",
+    ContextUrl: "./images/download book - simulation.pdf",
+    ItemName: "חנוכה - פורים",
   },
   // {
-  //   src: "./images/eitanim.png",
-  //   srcPDF: "./images/download book - simulation.pdf",
-  //   name: "ירח האיתנים",
+  //   ImgUrl: "./images/eitanim.png",
+  //   ContextUrl: "./images/download book - simulation.pdf",
+  //   ItemName: "ירח האיתנים",
   // },
   // {
-  //   src: "http://www.bnei-brak.muni.il/SiteCollectionImages/logo.png",
-  //   srcPDF: "http://www.bnei-brak.muni.il/Service/Documents/%D7%90%D7%92%D7%A3%20%D7%94%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA/195%20%D7%91%D7%99%D7%98%D7%95%D7%9C%20%D7%94.%D7%A7%D7%91%D7%A2%20%D7%91%D7%90%D7%A9%D7%A8%D7%90%D7%99%20-%20%D7%A0%D7%92%D7%99%D7%A9.pdf",
-  //   name: "ירח האיתנים",
+  //   ImgUrl: "http://www.bnei-brak.muni.il/SiteCollectionImages/logo.png",
+  //   ContextUrl: "http://www.bnei-brak.muni.il/Service/Documents/%D7%90%D7%92%D7%A3%20%D7%94%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA/195%20%D7%91%D7%99%D7%98%D7%95%D7%9C%20%D7%94.%D7%A7%D7%91%D7%A2%20%D7%91%D7%90%D7%A9%D7%A8%D7%90%D7%99%20-%20%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  //   ItemName: "ירח האיתנים",
   // },
 ];
 
 export default function Books(props) {
 
-  // const {booksList} = useSelector((state) => state.reducer);
+//  const {booksList} = useSelector((state) => state.reducer);
   return (
     <div>
       <Filter props={"ספרים"} />
       <div id="bookList">
 
-        {/* <video class="jw-video jw-reset" tabindex="-1" disableremoteplayback="" webkit-playsinline="" playsinline="" src="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" ></video> */}
-        {/* <video autoPlay={true} src="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" type="video/mp4" /> */}
+        {/* <video class="jw-video jw-reset" tabindex="-1" disableremoteplayback="" webkit-playsinline="" playsinline="" ImgUrl="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" ></video> */}
+        {/* <video autoPlay={true} ImgUrl="blob:https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120" type="video/mp4" /> */}
         {/* <ReactPlayer playing="true" url='https://www.kolhalashon.com/aff43f17-99a6-49c2-93b8-e7241e900120' /> */}
         {booksList.map((book) => (
           <Book book={book} key={book.ItemId} />

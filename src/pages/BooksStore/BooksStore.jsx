@@ -24,7 +24,7 @@ const BooksInStore = [{ src: "./images/av.png", name: "אבלות" ,price: "70.0
 ]
 
 export default function BooksStore(props) {
-
+ // const {booksList} = useSelector((state) => state.reducer);
   return (<div>
     <Filter props={"חנות ספרים"}/>
     <div id="bookList">

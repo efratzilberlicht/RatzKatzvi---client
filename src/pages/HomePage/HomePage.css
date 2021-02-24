@@ -158,3 +158,9 @@ p {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
+  .carousel-control-next {
+      background-color: transparent !important;
+  }
+  .carousel-control-prev {
+    background-color: transparent !important;  
+  }

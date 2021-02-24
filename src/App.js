@@ -15,6 +15,8 @@ import Contact from "./pages/Contact/Contact";
 import Subjects from "./pages/Subjects/Subjects";
 import ShiurimBySubject from "./pages/Shiurim/ShiurimBySubject";
 import Manager from "./components/Manager/Manager"
+import SignUp from "./components/SignIn/SignUp"
+ import LogIn from "./components/SignIn/LogIn"
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from "./actions";
@@ -45,6 +47,8 @@ function App() {
           <Route path="/Subjects/:SubjectId/:Subject" component={Subjects} />
           <Route path="/ShiurimBySubject" component={ShiurimBySubject} />
           <Route path="/Manager" component={Manager} />
+          <Route path="/SignUp" component={SignUp} />
+          <Route path="/LogIn" component={LogIn} />
           <Route path="/" component={HomePage} />
           
         </Switch>

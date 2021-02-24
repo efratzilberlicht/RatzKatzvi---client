@@ -39,3 +39,16 @@ right: 6vw;
 padding-right:  8vw; 
 margin:10vh;
 }
+.more {
+  background-color: transparent !important;
+  border:none !important;
+  width: 20vh !important;
+  margin-right:27vw !important;
+}
+.more:hover, .more:focus,.more:active {
+  text-decoration: none !important;
+}
+#more {
+  height: 2.5vh !important;
+  padding-bottom: 0.5vh !important;
+}

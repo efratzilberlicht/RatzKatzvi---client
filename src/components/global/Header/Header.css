@@ -32,15 +32,17 @@
   width:130px;
 }
 /* menu */
-a.nav-link {
-  color:rgb(193, 171, 135);
-  font-weight: 650;
-  font-size: 2.95vh;
+.nav-link {
+  color:rgb(193, 171, 135) !important;
+  font-weight: 650 !important;
+  font-size: 2.95vh !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
  
 }
-a.nav-link:hover {
-  color:white;
-  background-color:rgb(193, 171, 135);
+.nav-link:hover {
+  color:white !important;
+  background-color:rgb(193, 171, 135) !important;
 }
 .navbar {
   justify-content: center !important;

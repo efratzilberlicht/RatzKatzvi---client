@@ -15,20 +15,7 @@ box-shadow: none;
 .mr-sm-2 {
   margin-left:10vw !important;
 }
-#dropdownSerach {
-background-color: white !important;
-color:#dcc2a1;
-width: 25vw !important;
-top:20% !important;
-left: 30% !important;
-position: absolute;
-border-color: transparent !important;
-/* text-align: center; */
- margin-top: 3vw;
-margin-left: 15vw; 
-margin-bottom: 2vw !important; 
-}
 
-#dropdownSerach:focus{
- text-shadow: none !important;
+.dropdownSerach {
+ margin-top: 6vh !important;
 }

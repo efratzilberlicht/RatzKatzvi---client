@@ -156,3 +156,17 @@ export const deletePicture = createAsyncAction(
   'DELETE_PICTURE_SUCCESS',
   'DELETE_PICTURE_ERROR',
 )();
+
+//CV TEXT
+//GET CV TEXT
+export const getCVText = createAsyncAction(
+  'GET_CV_REQUEST',
+  'GET_CV_SUCCESS',
+  'GET_CV_ERROR',
+)();
+//UPDATE CV TEXT
+export const updateCVText = createAsyncAction(
+  'UPDATE_CV_REQUEST',
+  'UPDATE_CV_SUCCESS',
+  'UPDATE_CV_ERROR',
+)();

@@ -31,7 +31,12 @@ margin-bottom:5vw;
     padding: 0.5%;
     /* font-weight: 700 !important; */
     color:#03233a  ;
+    cursor: pointer;
 }
+#exampleFormControlFile1 {
+  cursor: pointer;
+}
+
 .h3:hover, .h3:focus, .h3:active {
  text-decoration: underline;
 }
@@ -49,6 +54,10 @@ margin-bottom:5vw;
  text-align: right !important;
  justify-content: right !important;
 }
+.form-control-file:focus, .form-control-file:active {
+  /* border-color: transparent !important; */
+  border:none !important;
+}
 /* .form-inline {
  padding-right: 0px !important;                 
 } */
@@ -59,6 +68,7 @@ margin-bottom:5vw;
 .custom-control-label {
 font-size:large !important;
 direction: rtl !important;
+cursor: pointer;
 }
 .custom-control-label::after{
 /* background-color:rgb(193, 171, 135) !important; */
@@ -94,7 +104,7 @@ border: 0px solid rgb(193, 171, 135) !important; */
 }
 .inner {
  padding-right: 1vw !important;
- padding-bottom: 2vw !important;
+ /* padding-bottom: 2vw !important; */
 }
 #exampleFormControlFile1{
   margin-right: -9vw !important;
@@ -109,7 +119,44 @@ border: 0px solid rgb(193, 171, 135) !important; */
 }
 .add {
   width: 6vw !important;
-  position: absolute !important;
-  margin-top:11vh !important;
-  margin-right:60.5vh !important;
+  font-weight: 700 !important;
+    font-size: 2.7vh !important;
+    max-width: 10% !important;
+    border-radius: 5px !important;
+    height: 5vh !important;
+    padding: 0% !important;
+    margin-top: 1vh; 
+       /* position: absolute !important; */
+    /* margin-top: 16vh !important; */
+    /* margin-right: 60.5vh !important; */
+  /* position: absolute !important;
+  margin-top:11vh !important;*/
+  margin-right:60.5vh !important; 
 }
+.subject_name {
+  border: 1px solid rgb(193, 171, 135) !important;
+  border-color: rgb(193, 171, 135) !important;
+  border-radius: none !important;
+  margin-right: -9.5vw !important;
+  margin-bottom: 3vh important;
+ }
+ .subSubject {
+ color:#03233a;
+ }
+
+ .form-control {
+   border-color:rgb(193, 171, 135) !important;
+   /* width: 21vw !important; */
+ }
+ .form-control:focus,.form-control:active {
+   box-shadow: none !important;
+ }
+ .dropdown {
+   margin-right: 1vw !important;
+   margin-top: -1vw !important;
+   margin-bottom: 1vw !important;
+ }
+ .update{
+  width: 5vw !important;
+  margin-top: -1.5vw !important; 
+ }

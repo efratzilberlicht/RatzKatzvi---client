@@ -1,0 +1,34 @@
+a {
+  /* width: 6vw !important; */
+  font-weight: 700 !important;
+    font-size: 2.7vh !important;
+    /* max-width: 10% !important; */
+    border-radius: 5px !important;
+    /* height: 5vh !important; */
+    color: #fff !important;
+    cursor: pointer;
+    background-color:#03233a !important;
+    padding: 6.5px;
+ }
+ a:hover {
+   text-decoration: none !important;
+ }
+ .dropItemFilter {
+   border-radius: 0px !important;
+   color:rgb(193, 171, 135) !important;
+   background-color: transparent !important;
+   direction: rtl !important;
+   align-items: center !important;
+ }
+ .list-unstyled {
+   text-align: center;
+   margin-right: -2.5vw;
+ }
+ .dropdown-menu {
+   width: 31vw !important;
+ }
+ .mx-3{
+     align-items: center;
+     padding-right: 10vw !important;  
+     padding-left: 7vw !important;              
+ }

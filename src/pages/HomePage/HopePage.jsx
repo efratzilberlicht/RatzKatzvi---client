@@ -1,9 +1,5 @@
 import React from 'react'
-// import connect from 'react-dom'
-// import PropTypes from 'prop-types'
-// import history from 'history';
 import { useHistory } from "react-router-dom";
-// import HistoryRouter from 'history-router'
 import { Carousel, Form, CardColumns, Col, Button, Card } from 'react-bootstrap'
 import Search from '../AdvancedSearch/Search';
 import './HomePage.css';
@@ -53,15 +49,9 @@ const UPDATES = [{
 }]
 
 export default function HomePage(props) {
-
-    // https://www.npmjs.com/package/history-router
-    //const router = new HistoryRouter()
     let history = useHistory();
     function getSubgects(SubjectId, Subject) {
-
-        //  history.push('/Subjects');
         history.push(`/Subjects/${SubjectId}/${Subject}`);
-
     };
 
     function getCarouselItem(scr, position) {

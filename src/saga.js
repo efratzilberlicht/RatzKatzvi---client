@@ -10,7 +10,8 @@ export function* init() {
       call(getSubjectsList),
       call(getShiurimList),
       call(getVideoList),
-      call(getPicturesList)
+      call(getPicturesList),
+      call(getCVText)
     ]);
     yield put(actions.init.success());
   } catch (err) {
@@ -20,7 +21,7 @@ export function* init() {
 
 //Books
 export function* getBooksList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/1`;
+  const requestURL = `${baseUrl}/items/GetAllByKind/1`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -44,7 +45,7 @@ export function* getSubjectsList() {
 
 //Shiurim
 export function* getShiurimList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/4`;
+  const requestURL = `${baseUrl}/items/GetAllByKind/4`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -56,7 +57,7 @@ export function* getShiurimList() {
 
 //Video
 export function* getVideoList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/3`;
+  const requestURL = `${baseUrl}/items/GetAllByKind/3`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
@@ -68,13 +69,25 @@ export function* getVideoList() {
 
 //Pictures
 export function* getPicturesList() {
-  const requestURL = `${baseUrl}/items/GetItemsByKind/5`;
+  const requestURL = `${baseUrl}/items/GetAllByKind/5`;
   try {
     const list = yield call(fetch, requestURL);
     const listJson = yield list.json();
     yield put(actions.getPicturesList.success(listJson));
   } catch (err) {
     yield put(actions.getPicturesList.failure(err));
+  }
+}
+
+//CVText
+export function* getCVText() {
+  const requestURL = `${baseUrl}/files/GetCvText`;
+  try {
+    const CV = yield call(fetch, requestURL);
+    const CVText = yield CV.json();
+    yield put(actions.getCVText.success(CVText));
+  } catch (err) {
+    yield put(actions.getCVText.failure(err));
   }
 }
 

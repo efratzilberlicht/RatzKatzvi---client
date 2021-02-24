@@ -14,6 +14,7 @@ export const initialState = {
   currentSubject: false,
   shiurimList: [],
   currentShiur: false,
+  CVText: false,
 };
 
 export const appReducer = (state = initialState, action) =>
@@ -134,6 +135,26 @@ export const appReducer = (state = initialState, action) =>
         }
 
       case getType(actions.getPicturesList.failure):
+        return {
+          ...state,
+          loading: false,
+        }
+
+      //CVText
+      case getType(actions.getCVText.request):
+        return {
+          ...state,
+          loading: true,
+        }
+
+      case getType(actions.getCVText.success):
+        return {
+          ...state,
+          loading: false,
+          CVText: action.payload
+        }
+
+      case getType(actions.getCVText.failure):
         return {
           ...state,
           loading: false,
