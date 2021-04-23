@@ -5,7 +5,6 @@ import './AdvancedSearch.css';
 
 export default function AdvancedSearch(props) {
 
-
   return (<div>
     <Filter props={"חיפוש מתקדם"}/>
     <div id="backgroundSearch">

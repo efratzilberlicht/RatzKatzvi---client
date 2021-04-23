@@ -11,8 +11,8 @@ export default function Menu(props) {
         <Nav.Link href="/MachshavaArticals">מאמרי מחשבה</Nav.Link>
         <Nav.Link href="/ShiurimBySubject">שיעורי הלכה</Nav.Link>
         <Nav.Link href="/Manager">שידור חי</Nav.Link>
-        <Nav.Link href="/LogIn">ספרית וידאו</Nav.Link>
-        <Nav.Link href="/SignUp">חנות ספרים</Nav.Link>
+        <Nav.Link href="/VideoLibrary">ספרית וידאו</Nav.Link>
+        {/* <Nav.Link href="/BooksStore">חנות ספרים</Nav.Link> */}
         <Nav.Link href="/Contact">צור קשר</Nav.Link>
     </Navbar>
     );

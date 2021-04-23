@@ -15,6 +15,7 @@ export const initialState = {
   shiurimList: [],
   currentShiur: false,
   CVText: false,
+  user:{},
 };
 
 export const appReducer = (state = initialState, action) =>
@@ -160,6 +161,27 @@ export const appReducer = (state = initialState, action) =>
           loading: false,
         }
 
+        //User
+      case getType(actions.getUser.request):
+        return {
+          ...state,
+          loading: true,
+        }
+
+      case getType(actions.getUser.success):
+        return {
+          ...state,
+          loading: false,
+          user: action.payload
+        }
+
+      case getType(actions.getUser.failure):
+        return {
+          ...state,
+          loading: false,
+        }
+         //User
+      
       default:
 
     }

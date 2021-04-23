@@ -16,24 +16,27 @@ import Subjects from "./pages/Subjects/Subjects";
 import ShiurimBySubject from "./pages/Shiurim/ShiurimBySubject";
 import Manager from "./components/Manager/Manager"
 import SignUp from "./components/SignIn/SignUp"
- import LogIn from "./components/SignIn/LogIn"
+import LogIn from "./components/SignIn/LogIn"
+import Loginy from "./components/SignIn/Loginy"
+import Signupy from "./components/SignIn/Signupy"
+import upload from "./components/global/upload"
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as actions from "./actions";
 
 function App() {
 
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(actions.init.request());
   }, [])
-
+    
   return (
     <div>
-      <Header />
+      
       <Router>
+        <Header />
         <Switch>
           <Route path="/About" component={About} />
           <Route path="/AdvancedSearch" component={AdvancedSearch} />
@@ -47,8 +50,11 @@ function App() {
           <Route path="/Subjects/:SubjectId/:Subject" component={Subjects} />
           <Route path="/ShiurimBySubject" component={ShiurimBySubject} />
           <Route path="/Manager" component={Manager} />
-          <Route path="/SignUp" component={SignUp} />
+          <Route path="/uplod" component={upload} />
           <Route path="/LogIn" component={LogIn} />
+          <Route path="/LogIny" component={Loginy} />
+          <Route path="/Signupy" component={Signupy} />
+          <Route path="/SignUp" component={SignUp} />
           <Route path="/" component={HomePage} />
           
         </Switch>

@@ -1,6 +1,7 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import * as actions from './actions';
 import { getType } from 'typesafe-actions';
+import { ToggleButton } from 'react-bootstrap';
 
 const baseUrl = 'https://localhost:44392/api';
 export function* init() {
@@ -88,6 +89,28 @@ export function* getCVText() {
     yield put(actions.getCVText.success(CVText));
   } catch (err) {
     yield put(actions.getCVText.failure(err));
+  }
+}
+
+//USER
+export function* getUser() {
+  const requestURL = `${baseUrl}/users/LoginByEmail/{email}/{password}`;
+  try {
+    const CV = yield call(fetch, requestURL);
+    const CVText = yield CV.json();
+    yield put(actions.getUser.success(CVText));
+  } catch (err) {
+    yield put(actions.getUser.failure(err));
+  }
+}
+export function* createUser(newUser) {
+  const requestURL = `${baseUrl}/users`;
+  try {
+    const CV = yield call(fetch, requestURL, { method: 'POST', body: {newUser} });
+    const CVText = yield CV.json();
+    yield put(actions.getUser.success(CVText));
+  } catch (err) {
+    yield put(actions.getUser.failure(err));
   }
 }
 

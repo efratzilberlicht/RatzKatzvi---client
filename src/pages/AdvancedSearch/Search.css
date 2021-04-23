@@ -19,3 +19,6 @@ box-shadow: none;
 .dropdownSerach {
  margin-top: 6vh !important;
 }
+.form-control::placeholder {
+  color: rgb(193, 171, 135) !important;
+}

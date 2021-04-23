@@ -15,8 +15,11 @@ export default function BooksManager(props) {
 
   const { booksList } = useSelector((state) => state.reducer);
   const { subjectsList } = useSelector((state) => state.reducer);
-  const [fromControl, setfromControl] = useState(false);
-  const click = () => setfromControl(!fromControl)
+  const [add, setadd] = useState(false);
+  const [update, setupdate] = useState(false);
+  const [del, setdel] = useState(false);
+
+  //const click = () => setfromControl(!fromControl)
 
   // const [id, setid] = useState(-1);
   const [subSubjectsList, setsubSubjectsList] = useState([]);
@@ -37,12 +40,14 @@ export default function BooksManager(props) {
     <Accordion defaultActiveKey="0">
       <Accordion.Toggle className="accordion" as={Button} variant="link" eventKey="1">
         ספרים
-   <hr className="hr" />
-      </Accordion.Toggle>
+        <hr className="hr" />
+      </Accordion.Toggle> 
+      
       <Accordion.Collapse eventKey="1">
         <div>
-          <h3 className="h3" onClick={click}>הוספת ספר:</h3>
-          {fromControl ? <div className="inner"><h5 className="h5">שם הספר ישמר כשם הקובץ</h5>
+          
+          <h3 className="h3" onClick={() =>setadd(!add)}>הוספת ספר:</h3>
+          {add ? <div className="inner"><h5 className="h5">שם הספר ישמר כשם הקובץ</h5>
             <Form className="file_form" dir="rtl" inline>
               <Form.Group>
                 <Form.File id="exampleFormControlFile1" className="file" onChange={() => handleChangeFile(JSON.parse(this))}
@@ -84,12 +89,11 @@ export default function BooksManager(props) {
             </div>
           </div> : false}
           
-          <h3 className="h3" onClick={click}>עדכון ספר:</h3>
-         {fromControl ? <div className="inner"> 
+          <h3 className="h3" onClick={() =>setupdate(!update)}>עדכון ספר:</h3>
+         {update ? <div className="inner"> 
          <DropdownFilter props={{name: "ספר", list: booksList}} />
          {/* <h5 className="h5">בחר ספר:</h5> */}
           {/* className="dropdown_filter" */}
-          
            <h5 className="h5">העלה קובץ מעודכן של הספר:</h5>
             <Form className="file_form" dir="rtl" inline>
               <Form.Group>
@@ -98,7 +102,11 @@ export default function BooksManager(props) {
             </Form>
             <Button className="hvr-grow add update" variant="primary" type="submit" >עדכון</Button>
             </div> : false}
-          <h3 className="h3">מחיקת ספר:</h3>
+          <h3 className="h3" onClick={() =>setdel(!del)}>מחיקת ספר:</h3>
+          {del ? <div className="inner"> 
+         <DropdownFilter props={{name: "ספר", list: booksList}} />
+            <Button className="hvr-grow add" variant="primary" type="submit" >מחיקה</Button>
+            </div> : false}
           <hr className="hr" id="bottom_hr" />
         </div>
       </Accordion.Collapse>

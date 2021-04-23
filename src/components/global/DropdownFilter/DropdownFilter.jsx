@@ -6,6 +6,7 @@ export default function DropdownFilter(props) {
  const [itemName, setitemName] = useState(`בחר ${props.props.name}   `)
  const handleChooseItem = event => {
   if(props.props.name === "נושא"){
+      console.log(event.Subject);
       setitemName(event.Subject);             
   } 
   else {
@@ -63,7 +64,7 @@ const CustomMenu = React.forwardRef(
      </Dropdown.Toggle>
   
      <Dropdown.Menu as={CustomMenu} onSelect={eventKey => {
-           handleChooseItem(JSON.parse(eventKey))}}>
+           handleChooseItem(eventKey)}}>
         {props.props.list.map(subject => <Dropdown.Item
                  className="dropItemFilter"                
                  eventKey={JSON.stringify(subject)}
@@ -84,7 +85,7 @@ else {
        </Dropdown.Toggle>
     
        <Dropdown.Menu as={CustomMenu} onSelect={eventKey => {
-             handleChooseItem(JSON.parse(eventKey))}}>
+             handleChooseItem(eventKey)}}>
           {props.props.list.map(item => <Dropdown.Item
                    className="dropItemFilter"                
                    eventKey={JSON.stringify(item)}

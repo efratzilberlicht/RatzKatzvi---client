@@ -131,9 +131,9 @@ export const deleteVideo = createAsyncAction(
 //Pictures
 // GET PICTURES
 export const getPicturesList = createAsyncAction(
-  'GET_VIDEO_REQUEST',
-  'GET_VIDEO_SUCCESS',
-  'GET_VIDEO_ERROR',
+  'GET_PICTURE_REQUEST',
+  'GET_PICTURE_SUCCESS',
+  'GET_PICTURE_ERROR',
 )();
 
 // ADD PICTURE
@@ -169,4 +169,32 @@ export const updateCVText = createAsyncAction(
   'UPDATE_CV_REQUEST',
   'UPDATE_CV_SUCCESS',
   'UPDATE_CV_ERROR',
+)();
+//USER
+// GET USER
+export const getUser = createAsyncAction(
+  'GET_PICTURE_REQUEST',
+  'GET_PICTURE_SUCCESS',
+  'GET_PICTURE_ERROR',
+)();
+
+// ADD USER
+export const addUser = createAsyncAction(
+  'ADD_USER_REQUEST',
+  'ADD_USER_SUCCESS',
+  'ADD_PICTURE_ERROR',
+)();
+
+// UPDATE USER
+export const updateUser = createAsyncAction(
+  'UPDATE_USER_REQUEST',
+  'UPDATE_USER_SUCCESS',
+  'UPDATE_USER_ERROR',
+)();
+
+// DELETE USER
+export const deleteUser = createAsyncAction(
+  'DELETE_USER_REQUEST',
+  'DELETE_USER_SUCCESS',
+  'DELETE_USER_ERROR',
 )();

@@ -1,9 +1,30 @@
-import React from "react";
+import React ,{ useState, createRef }from "react";
 import Filter from "../../components/global/Filter/Filter";
 import { Form, Button } from 'react-bootstrap'
+import axios from 'axios'
 import "./Contact.css";
 
 export default function Contact(props) {
+  const NameRef = createRef();
+  const PhoneRef = createRef();
+  const EmailRef = createRef();
+  const MessageRef = createRef();
+  let message;
+  function messageToDispatch() {
+    // event.preventDefault();
+    message = {
+        //   userId: uuid(),
+        Name: NameRef.current.value,
+        Phone: PhoneRef.current.value,
+        Email: EmailRef.current.value,
+        Message: MessageRef.current.value,
+    }
+    // var x = callToServer();
+    axios.post('https://localhost:44392/api/users/SendAnEmail', message).then(res => {
+        debugger;
+        console.log(res.data);
+    });
+}
 
   return (
     <div>
@@ -28,11 +49,11 @@ export default function Contact(props) {
             <Form dir="rtl">
               <Form.Row className="formRow align-items-md-center">
 
-                <Form.Control className="contact col-md-3" placeholder="שם" />
-                <Form.Control className="contact col-md-3" placeholder="טל" />
-                <Form.Control className="contact col-md-3" placeholder="מייל" />
-                <Form.Control as="textarea" id="textarea" className="col-md-9" rows={5} placeholder="הודעה" />
-                <Button className="contact_submit col-md-2 hvr-grow" variant="primary" type="submit">שליחה</Button>
+                <Form.Control className="contact col-md-3" placeholder="שם:" ref={NameRef} />
+                <Form.Control className="contact col-md-3" placeholder="טל:" ref={PhoneRef}/>
+                <Form.Control className="contact col-md-3" placeholder="מייל:" ref={EmailRef} />
+                <Form.Control as="textarea" id="textarea" className="col-md-9" ref={MessageRef} rows={5} placeholder="הודעה:"/>
+                <Button className="contact_submit col-md-2 hvr-grow" variant="primary" type="button" onClick={messageToDispatch}>שליחה</Button>
 
               </Form.Row>
             </Form>

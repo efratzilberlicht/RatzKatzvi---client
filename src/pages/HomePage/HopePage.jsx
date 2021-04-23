@@ -122,7 +122,7 @@ export default function HomePage(props) {
         </div>
         <div id="icons">
             <h1 className="centerBlueTitle">מאגר נושאים</h1>
-            <div className="d-flex SubIcons" >
+            <div className="d-flex SubIcons w-auto" >
                 <CardColumns className="cardColumns">
                     {ICONS.map(icon => getIconCard(icon.SubjectId, icon.Subject, icon.src))}
                 </CardColumns>

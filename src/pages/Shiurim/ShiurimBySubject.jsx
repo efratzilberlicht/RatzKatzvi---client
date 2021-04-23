@@ -19,7 +19,9 @@ export default function ShiurimBySubject(props) {
 //  const {shiurimList} = useSelector((state) => state.reducer);
   return (
     <div>
-      <Filter props={props.Subject} />
+      {/* props={props.Subject} */}
+      
+      <Filter props={"שיעורי הלכה"} />
      
       <div id="shiurimList">
         {shiurimList.map((shiur) => (

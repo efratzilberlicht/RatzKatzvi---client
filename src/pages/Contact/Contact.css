@@ -49,7 +49,9 @@ line-height: 1.5rem;
  border: 0px solid white !important;
  border-radius: 0px !important;
  margin-right: 0.5%;
- 
+}
+#textarea::placeholder {
+  color:rgb(186,151,55) !important;
 }
 #textarea:focus {
   box-shadow: none !important;
@@ -88,4 +90,7 @@ line-height: 1.5rem;
  border-radius: 5px !important;
  height: 5vh !important;
  padding: 0% !important; 
+}
+.contact::placeholder {
+  color:rgb(186,151,55) !important;
 }

@@ -1,8 +1,21 @@
-.wraper {
-  width:30vw !important ;
-  margin-right: 30vw;                
+.login {
+  width:22vw;
+  text-align: center !important;
+  padding-top: 3vh;
 }
-
+.signup {
+  width:40vw;
+  text-align: center !important;
+  padding-top: 3vh;
+}
+.login_input {
+  margin-bottom: 4vh;
+  border: 2px solid rgb(193, 171, 135) !important;
+}
+.login_title {
+  text-align: center !important;
+  /* font-weight: 700 !important; */
+}
 /* * {
                   box-sizing: border-box;
                 }

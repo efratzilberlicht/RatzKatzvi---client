@@ -6,15 +6,24 @@ import './About.css';
 
 export default function About(props) {
   const { CVText } = useSelector((state) => state.reducer);
-  function splitArrayIntoChunksOfLen(arr, len) {
-    var chunks = [], i = 0, n = arr.length;
-    console.log(arr);
-    while (i < n) {
-      chunks.push(arr.slice(i, i += len));
-    }
-    return chunks;
+  let text, text1, text2;
+
+  if(CVText) {
+    text = CVText.split('.');
+    text1 = text.slice(0,(text.length/2));
+    text2 = text.slice((text.length/2));
   }
-  var text = splitArrayIntoChunksOfLen(CVText,2); 
+  
+ 
+  // function splitArrayIntoChunksOfLen(arr, len) {
+  //   var chunks = [], i = 0, n = arr.length;
+  //   console.log(arr);
+  //   while (i < n) {
+  //     chunks.push(arr.slice(i, i += len));
+  //   }
+  //   return chunks;
+  // }
+  // var text = splitArrayIntoChunksOfLen(CVText,2); 
   
   // function splitForTow(text){
   //   var textArray = text.split(".");
@@ -30,7 +39,7 @@ export default function About(props) {
       <div id="text">
         <h1 id="title">צבי רייזמן - מחבר ספרי רץ כצבי</h1>
             <p>
-          {CVText}
+          {text1}
           {/* {text[50]} */}
       {/* {CVText.split(".")} */}
             </p>
@@ -39,7 +48,7 @@ export default function About(props) {
      <p>קרא עוד <img id="more" src="./images/more.png" alt="more"/></p>
       </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
-    <p> אמור להיות כאן חצי מהטקסט</p>
+  <p> {text2} </p>
     </Accordion.Collapse>
 </Accordion>
         </div>

@@ -1,34 +1,62 @@
-import React ,{useState}from "react";
+import React ,{ useState, createRef }from "react";
 import { Form, Button, Dropdown, FormControl } from 'react-bootstrap'
+import axios from 'axios'
 import "./LogIn.css"
 // import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
+import Filter from "../../components/global/Filter/Filter";
 
-const LogIn = () => {
+export default function Login(props) {
+
+  const [attempt, setAttempt] = useState(false);
+  const EmailRef = createRef();
+  const PasswordRef = createRef();
+
+  const loginHandler = () => {
+//        event.preventDefault();
+    const user = {
+     Email: EmailRef.current.value,
+     Password: PasswordRef.current.value,
+    }
+    // props.validateUser(user);
+    // if (!props.user)
+    //   setAttempt(true);
+
+    const userfromDB = axios.post('https://localhost:44392/api/users/Login', user).then(res=>
+      alert(res.data)
+      )
+      alert(userfromDB)
+    debugger;
+
+  }
+
 return (
-
-  <div className="wraper">
+   <>
+   <div className="login m-auto">
   <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
+    {/* <Form.Label>:Enter your email</Form.Label> */}
+    <Form.Control className="login_input" ref={EmailRef} type="email" placeholder="Email address" />
+    {/* <Form.Text className="text-muted">
       We'll never share your email with anyone else.
-    </Form.Text>
+    </Form.Text> */}
   </Form.Group>
 
   <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    {/* <Form.Label>:Choose Password</Form.Label> */}
+    <Form.Control className="login_input" ref={PasswordRef} type="password" placeholder="Password" />
   </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
+  {/* <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
+  </Form.Group> */}
+  {attempt && props.user === false && <h6>email or password are incorrect</h6>}
+  <Button className="hvr-pulse" variant="primary" type="submit" onClick={loginHandler}>
+    LogIn
   </Button>
+  <h5>Haven't signed up yet?  <a herf={`/Signupy`}>SIGN UP</a> </h5>
+     
 </Form>
 </div>
-
+</>
 /* <MDBContainer>
   <MDBRow>
     <MDBCol md="6">
@@ -49,4 +77,3 @@ return (
 );
 };
 
-export default LogIn;

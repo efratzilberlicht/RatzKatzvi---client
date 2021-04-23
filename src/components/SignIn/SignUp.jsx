@@ -1,91 +1,66 @@
-import React, { useState, useCallback } from 'react'
-import { Form, Col, Modal } from 'react-bootstrap';
+import React, { useState, createRef } from 'react'
+import { Form, Col, Modal, Alert, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { call } from 'redux-saga/effects';
+import axios from 'axios'
+import { createUser } from '../../saga'
+// import uuid from 'uuid-random';
 import "./LogIn.css"
 export default function SignUp(props) {
-    
-    const [state , setState] = useState({
-            UserId: "",
-            Firstname: "",
-            Lastname: "",
-            PatientTz: "",
-            DateOfBirth: "",
-            Email: "",
-            Password: ""
-    })
-    
-    const handleChange = (e) => {
-        const {id , value} = e.target   
-        setState(prevState => ({
-            ...prevState,
-            [id] : value
-        }))
+    const [showAlert, setShowAlert] = useState(false);
+
+    const UserNameRef = createRef();
+    const PasswordRef = createRef();
+    const EmailRef = createRef();
+    const PhoneRef = createRef();
+
+    let newUser;
+
+    function* callToServer() {
+        yield call(createUser, newUser);
+        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     }
-    const inputChange = (event) => {
-        const newperson = { ...this.state.patient };
-        const id = event.target.id;
-        newperson[id] = event.target.value;
-        this.setState({ patient: newperson });
-
+    var userfromDB;
+    function formToDispatch() {
+        // event.preventDefault();
+        newUser = {
+            //   userId: uuid(),
+            UserName: UserNameRef.current.value,
+            Password: PasswordRef.current.value,
+            Email: EmailRef.current.value,
+            isRegistered: false,
+        }
+        // var x = callToServer();
+        axios.post('https://localhost:44392/api/users', newUser).then(res => {
+            debugger;
+            console.log(res.data);
+        });
+      
+        setShowAlert(true);
     }
 
-//    const register = () => {
 
-//         const newP = { ...this.state.patient };
-//         // debugger;
-//         // alert(this.state.patient.Firstname + " " + this.state.patient.Email);
-//         // alert(newP.Firstname + "  " + newP.Email)
-//         axios.post('patients/Register', newP).then(res => {
-//             alert(res.data);
-//             //localStorage.setItem("user", JSON.stringify(res.data))
-//         });
-//     }
-return(
-    <div>
-    <Form className="signup" >
+    return (
+        <div className="signup m-auto">
+            {/* onSubmit={formToDispatch} */}
+            <Form className="signup">
+                {showAlert && (
+                    <Alert variant="light">
+                        <Alert.Heading>נרשמת בהצלחה!</Alert.Heading>
+                    </Alert>
+                )}
                 <Form.Row>
-                    <Form.Group as={Col}  >
-                    {/* value={this.state.Firstname} */}
-                        <Form.Control placeholder="שם פרטי" className="inputs" id="Firstname"  onChange={(event) => this.inputChange(event)} />
+                    <Form.Group >
+                        {/* value={this.state.Firstname} */}
+                        <Form.Control placeholder="שם משתמש" className="inputs" id="Firstname" ref={UserNameRef} required />
                     </Form.Group>
-                    {/* <Form.Group as={Col} controlId="first_name">
-                            <Form.Control placeholder="שם פרטי" />
 
-                        </Form.Group> */}
-
-                    <Form.Group as={Col} >
-                    {/* value={this.state.Lastname} */}
-                        <Form.Control placeholder="שם משפחה" className="inputs" id="Lastname"  onChange={(event) => this.inputChange(event)} />
-                    </Form.Group>
                 </Form.Row>
 
                 <Form.Row>
-                    <Form.Group as={Col}>
-                    {/* value={this.state.PatientTz} */}
-                        <Form.Control placeholder=".ת.ז" className="inputs" id="PatientTz"  onChange={(event) => this.inputChange(event)} />
-                    </Form.Group>
-
-                    <Form.Group as={Col} >
-                    {/* value={this.state.DateOfBirth} */}
-                        <Form.Control type="date" placeholder="תאריך לידה" className="inputs" id="DateOfBirth"  onChange={(event) => this.inputChange(event)} />
-                    </Form.Group>
-                </Form.Row>
-
-                <Form.Row>
-                    <Form.Group as={Col}>
-                    {/* value={this.state.PhoneNumber1} */}
-                        <Form.Control type="Phone" placeholder="טלפון" className="inputs" id="PhoneNumber1"  onChange={(event) => this.inputChange(event)} />
-                    </Form.Group>
-
-                    <Form.Group as={Col}>
-                        
-                        <Form.Control placeholder="טלפון נוסף" className="inputs" id="PhoneNumber2"  onChange={(event) => this.inputChange(event)} />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                    <Form.Group key={3} as={Col}>
-                    {/* value={this.state.Email} */}
-                        <Form.Control key={4} type="email" placeholder="כתובת מייל" className="inputs" id="Email"  onChange={(event) => this.inputChange(event)} />
+                    <Form.Group>
+                        {/* value={this.state.Email} */}
+                        <Form.Control type="email" placeholder="כתובת מייל" className="inputs" id="Email" ref={EmailRef} required />
                     </Form.Group>
                 </Form.Row>
                 {/* </Form> */}
@@ -96,27 +71,28 @@ return(
 
                 {/* <Form> */}
                 <Form.Row>
-                    <Form.Group as={Col} >
-                    {/* value={this.state.Password} */}
-                        <Form.Control type="password" placeholder="סיסמא" className="inputs" id="Password"  onChange={(event) => this.inputChange(event)} />
+                    <Form.Group>
+                        {/* value={this.state.Password} */}
+                        <Form.Control type="password" placeholder="סיסמא" className="inputs" id="Password" ref={PasswordRef} required />
                     </Form.Group>
 
-                    <Form.Group as={Col}>
+                    <Form.Group>
                         <Form.Control type="password" className="inputs" id="confirm_password" placeholder="אימות סיסמא " />
                     </Form.Group>
 
 
                     {/* type="submit"  */}
-                    <Form.Group as={Col}>
-                        <Link onClick={() => { this.register() }}>
-                            {/* <img src={arrow} id="arrow" /> */}
-                            </Link>
+                    <Form.Group>
+                        <Button type="button" className="mb-2" onClick={formToDispatch}>
+
+                            הרשמה
+              </Button>
                     </Form.Group>
                 </Form.Row>
             </Form>
- </div>)
- }
-   {/* // <form>
+        </div>)
+}
+{/* // <form>
     //             <h3>Sign Up</h3>
 
     //             <div className="form-group">
